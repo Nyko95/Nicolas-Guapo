@@ -1,0 +1,52 @@
+/*
+Theme Name: Nicolas Guapo
+Theme URI: http://example.com/nicolas-guapo
+Author: Nicolas Guapo
+Author URI: http://example.com
+Description: Portfolio de Nicolas Guapo
+Version: 1.0
+*/
+
+/*STYLE GENERAL*/
+
+/* Charger la police Lato Regular */
+@font-face {
+    font-family: 'Lato';
+    src: url('assets/fonts/lato-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Charger la police Lato Bold */
+@font-face {
+    font-family: 'Lato';
+    src: url('assets/fonts/lato-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Charger la police Montserrat Regular */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/montserrat-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Charger la police Montserrat Bold */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/montserrat-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Utiliser Lato pour le corps du texte */
+body {
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+/* Utiliser Montserrat pour les titres */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', Arial, sans-serif;
+}
