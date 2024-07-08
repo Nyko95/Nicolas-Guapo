@@ -1,0 +1,113 @@
+.creation {
+  padding: 50px 0;
+  background: linear-gradient(
+    to bottom,
+    #2caeb4,
+    /* Vert profond */ #50bba3,
+    /* Vert bleuté */ #75c993,
+    /* Vert moyen */ #a3d680 /* Vert clair */
+  );
+
+  .container {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .creation-title {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 100px;
+    color: #333;
+    border: solid;
+    opacity: 0; // Initialement caché
+    transform: translateY(100px); // Position initiale pour l'effet de montée
+    transition: opacity 2s ease, transform 2s ease; // Transition pour l'opacité et la position
+
+    &.is-visible {
+      opacity: 1; // Rendre visible
+      transform: translateY(0); // Déplacer à la position finale
+    }
+  }
+
+  .creation-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center; /* Centrer horizontalement */
+  }
+
+  .creation-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: opacity 1s ease, transform 1s ease; // Transition pour l'opacité et la position
+    opacity: 0; // Initialement caché
+    transform: translateY(100px); // Position initiale pour l'effet de montée
+
+    &.is-visible {
+      opacity: 1; // Rendre visible
+      transform: translateY(0); // Déplacer à la position finale
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .creation-image img {
+      width: 100%;
+      height: auto;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      margin: 15px 0 10px;
+      color: #333;
+    }
+    a {
+      color: black;
+    }
+
+    p {
+      font-size: 1em;
+      color: #666;
+      padding: 0 10px 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px 0;
+      background: linear-gradient(
+        to bottom,
+        #2caeb4,
+        #50bba3,
+        #75c993,
+        #a3d680
+      );
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #555;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .creation .container {
+    padding: 0 15px;
+  }
+
+  .creation-list {
+    grid-template-columns: 1fr; /* Un seul article par ligne sur les petits écrans */
+  }
+}

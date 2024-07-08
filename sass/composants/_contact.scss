@@ -1,0 +1,124 @@
+.contact-section {
+  padding: 50px 0;
+  background: linear-gradient(to bottom, #a3d680, #75c993, #50bba3, #2caeb4);
+  display: flex;
+  justify-content: center;
+
+  .container {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+    p {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .contact-title {
+    text-align: center;
+    font-size: 4em;
+    margin-bottom: 30px;
+    color: #333;
+    border: solid;
+    opacity: 0; // Initialement caché
+    transform: translateY(100px); // Position initiale pour l'effet de montée
+    transition: opacity 2s ease, transform 2s ease; // Transition pour l'opacité et la position
+
+    &.is-visible {
+      opacity: 1; // Rendre visible
+      transform: translateY(0); // Déplacer à la position finale
+    }
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-form {
+    max-width: 450px;
+    background: linear-gradient(to bottom, #c1efcb, #a3e2b3, #84d69b, #66ca83);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    opacity: 0; // Initialement caché
+    transform: translateY(100px); // Position initiale pour l'effet de montée
+    transition: opacity 2s ease, transform 2s ease; // Transition pour l'opacité et la position
+
+    &.is-visible {
+      opacity: 1; // Rendre visible
+      transform: translateY(0); // Déplacer à la position finale
+    }
+
+    p {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: flex-start; // Alignement à gauche pour les labels
+      align-items: center; // Centrage vertical des labels
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+      flex: 1; // Pour s'étendre sur toute la largeur disponible
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: calc(
+        100% - 24px
+      ); // Ajustement pour compenser le padding et la bordure
+      padding: 10px 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: black;
+      box-shadow: 0 0 5px #2e353c80;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: black;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-size: 16px;
+      margin-left: 50px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #3b4045;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2em;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+}

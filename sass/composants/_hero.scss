@@ -1,0 +1,85 @@
+.hero {
+  position: relative;
+  height: 80vh; /* Ajustez si nécessaire */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", Arial, sans-serif;
+  padding: 0 20px;
+  overflow: hidden;
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .hero-background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assurez-vous que l'image couvre toute la zone */
+  }
+
+  .hero-content {
+    z-index: 1;
+    position: relative;
+    opacity: 0; /* Initialement caché */
+    transform: translateY(100px); /* Déplacement initial vers le bas augmenté */
+    transition: opacity 3s ease, transform 3s ease; /* Durée de l'animation augmentée */
+  }
+
+  .hero-content.is-visible {
+    opacity: 1; /* Affiche le texte */
+    transform: translateY(0); /* Remet le texte à sa position initiale */
+  }
+
+  h1 {
+    font-size: 75px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  p {
+    font-size: 28px; /* Taille du texte normal */
+    transition: transform 0.3s ease;
+  }
+
+  h1:hover,
+  p:hover {
+    transform: scale(1.05); /* Zoom au survol */
+  }
+
+  // Media queries pour les tablettes et mobiles
+  @media (max-width: 768px) {
+    .hero {
+      height: 60vh;
+    }
+
+    h1 {
+      font-size: 48px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      height: 50vh;
+    }
+
+    h1 {
+      font-size: 56px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+}

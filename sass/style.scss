@@ -1,0 +1,23 @@
+//IMPORT FICHIER SASS
+
+@import "./composants/_header.scss";
+@import "./composants/_footer.scss";
+@import "./composants/_hero.scss";
+@import "./composants/_parcours.scss";
+@import "./composants/_creation.scss";
+@import "./composants/_creation-detail.scss";
+@import "./composants/_contact.scss";
+//style général
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "caveat", cursive;
+}

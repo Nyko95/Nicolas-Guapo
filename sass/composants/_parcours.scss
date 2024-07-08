@@ -1,0 +1,166 @@
+.parcours {
+  padding: 50px 0;
+  background: linear-gradient(
+    to bottom,
+
+    #a3d680,
+    // Vert clair
+    #75c993,
+    // Vert moyen
+    #50bba3,
+    // Vert bleuté
+    #2caeb4 // Vert profond
+  );
+
+  .parcours-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    gap: 140px;
+    opacity: 0; // Initialement caché
+    transform: translateY(100px); // Position initiale pour l'effet de montée
+    transition: opacity 2s ease, transform 2s ease; // Transition pour l'opacité et la position
+
+    &.is-visible {
+      opacity: 1; // Rendre visible
+      transform: translateY(0); // Déplacer à la position finale
+    }
+
+    .parcours-image {
+      flex: 1;
+      text-align: center;
+
+      img {
+        max-width: 80%; // Ajuste la taille de l'image à 80% du conteneur
+        height: auto;
+        border-radius: 50%; // Image en cercle
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Ombre légère
+      }
+    }
+
+    .parcours-text {
+      flex: 2;
+      font-size: 1.2em;
+      line-height: 1.6;
+      h2 {
+        display: flex;
+        justify-content: center;
+        font-size: 3em;
+        color: #333;
+        border: solid;
+
+        @media (max-width: 768px) {
+          font-size: 2em;
+        }
+      }
+
+      p {
+        color: #555;
+
+        @media (max-width: 768px) {
+          font-size: 1em;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+
+      .parcours-image {
+        display: none;
+      }
+    }
+  }
+
+  .parcours-extra {
+    max-width: 800px;
+    margin: 80px auto 0 auto;
+    padding: 20px;
+    border-top: 2px solid #e0e0e0; // Ligne de séparation
+    border-bottom: 2px solid #e0e0e0; // Ligne de séparation
+    text-align: center;
+    opacity: 0; // Initialement caché
+    transform: translateY(100px); // Position initiale pour l'effet de montée
+    transition: opacity 2s ease, transform 2s ease; // Transition pour l'opacité et la position
+
+    &.is-visible {
+      opacity: 1; // Rendre visible
+      transform: translateY(0); // Déplacer à la position finale
+    }
+
+    p {
+      font-size: 1em;
+      color: #555;
+      margin-bottom: 20px;
+      margin-top: 50px;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      .btn {
+        display: inline-flex;
+        align-items: center; // Alignement des icônes et du texte
+        gap: 10px; // Espace entre les icônes et le texte
+        padding: 10px 20px;
+        font-size: 1em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        img.icon {
+          width: 20px; // Taille des icônes
+          height: auto;
+        }
+
+        &.cv-btn {
+          background-color: #369239;
+          color: #fff;
+
+          &:hover {
+            background-color: #28802c;
+          }
+        }
+
+        &.linkedin-btn {
+          background-color: #0077b5;
+          color: #fff;
+
+          &:hover {
+            background-color: #00669a;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .parcours-container {
+      padding: 0 10px;
+    }
+
+    .parcours-text {
+      text-align: center;
+    }
+
+    .parcours-extra {
+      text-align: center;
+
+      .links {
+        flex-direction: column;
+        align-items: center;
+
+        .btn {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
