@@ -4,7 +4,7 @@
     </div>
     <div class="hero-content">
         <h1>Nicolas Guapo</h1>
-        <p>Développeur Web Frontend</p>
+        <strong><p id="role">Développeur Web</p></strong>
     </div>
 </section>
 

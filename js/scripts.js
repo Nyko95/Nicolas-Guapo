@@ -49,3 +49,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+//ANIM HERO HEADER
+
+jQuery(document).ready(function ($) {
+  // Liste des rôles à afficher séquentiellement
+  var roles = [
+    "Développeur Passionné",
+    "Développeur Frontend",
+    "Développeur Créatif",
+  ];
+
+  // Sélection de l'élément par son ID
+  var roleElement = $("#role");
+
+  // Index pour parcourir les rôles séquentiellement
+  var currentIndex = 0;
+
+  // Fonction pour afficher le rôle suivant
+  function afficherRoleSuivant() {
+    // Afficher le rôle courant
+    roleElement.fadeOut(400, function () {
+      $(this).text(roles[currentIndex]).fadeIn(400);
+    });
+
+    // Passer au rôle suivant
+    currentIndex++;
+    if (currentIndex >= roles.length) {
+      currentIndex = 0; // Revenir au début de la liste une fois arrivé à la fin
+    }
+  }
+
+  // Appel initial et intervalle pour changer le rôle toutes les 3 secondes
+  setInterval(afficherRoleSuivant, 3000); // Changer toutes les 3 secondes
+});

@@ -47,6 +47,18 @@
   p {
     font-size: 28px; /* Taille du texte normal */
     transition: transform 0.3s ease;
+    background: linear-gradient(
+      to bottom,
+      #2caeb4,
+      /* Vert profond */ #50bba3,
+      /* Vert bleuté */ #75c993,
+      /* Vert moyen */ #a3d680 /* Vert clair */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Pour s'assurer que le texte est transparent pour d'autres navigateurs */
+    display: inline-block; /* Pour éviter les problèmes avec les éléments block */
   }
 
   h1:hover,

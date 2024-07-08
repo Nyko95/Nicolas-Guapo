@@ -11,7 +11,9 @@
         <div class="parcours-text">
             <h2 class="parcours-title">À propos de moi</h2>
             <p class="parcours-description">
-                "Ancien commercial dans l'immobilier et l'automobile, je me lance dans une nouvelle aventure : devenir développeur web. Ma passion pour la création, l'apprentissage continu, et la lecture me pousse à exceller dans ce domaine. Prêt à concevoir des solutions web sur mesure, je suis à votre service pour enrichir votre présence en ligne."
+            "Ayant fait la transition de l'automobile à la programmation, j'ai troqué les rapports de vente contre des lignes de code. Pendant sept ans, j'ai perfectionné l'art du conseil commercial, guidant mes clients dans le choix de leur véhicule idéal. Aujourd'hui, je me consacre à façonner des sites web. Une passion croissante pour la technologie m'a orienté vers une nouvelle carrière : le Développement Web. Sérieux, assidu et toujours prêt à relever de nouveaux défis, j'incarne la transition d'un conseiller commercial vers un développeur passionné. Ma philosophie ?
+  <br><br>
+  <span class="phrase-accroche">Passer de la boîte de vitesses à la boîte de code, sans jamais caler !"</span>
             </p>
         </div>
     </div>
@@ -21,10 +23,10 @@
         <p>Téléchargez mon CV et visitez mon profil LinkedIn pour en savoir plus sur mon parcours professionnel.</p>
         <div class="links">
             <a href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/docs/nicolas-guapo-cv.pdf" class="btn cv-btn" target="_blank">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/pdf-icon.png" alt="PDF Icon" class="icon" /> Télécharger CV
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/pdf-icon.png" alt="PDF Icon" class="icon" />
             </a>
             <a href="https://www.linkedin.com/in/nicolas-guapo-1b2848131" class="btn linkedin-btn" target="_blank">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/linkedin-icon.png" alt="LinkedIn Icon" class="icon" /> Mon LinkedIn
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/linkedin-icon.png" alt="LinkedIn Icon" class="icon" /> 
             </a>
         </div>
     </div>
