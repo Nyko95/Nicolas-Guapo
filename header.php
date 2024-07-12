@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
-    <title>Nicolas Guapo</title>
+    <title>Nicolas Guapo Dev</title>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -47,7 +47,7 @@
                     wp_nav_menu(array(
                         'theme_location' => 'menu-principal',
                         'container' => false,
-                        'items_wrap' => '%3$s', // Utilise seulement les éléments du menu sans ul
+                        
                     ));
                     ?>
                 </ul>
@@ -55,5 +55,6 @@
         </div>
     </header>
     <?php wp_footer(); ?>
+   
 </body>
 </html>

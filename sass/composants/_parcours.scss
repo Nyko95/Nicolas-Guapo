@@ -124,13 +124,13 @@
           color 0.3s ease;
         position: relative;
         color: #333;
+        font-size: 70%;
 
         &:hover {
           animation: swing 0.5s ease-in-out; /* Ajouter l'animation swing au survol */
         }
 
         .icon {
-          max-width: 40%; /* Adapter la taille des icônes */
           height: auto;
           margin-right: 30px;
           margin-left: 30px;

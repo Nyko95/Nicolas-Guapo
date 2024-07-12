@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Fonction de rappel pour l'IntersectionObserver
+  // FADE IN SUR CHAQUES SECTIONS
+
+  // Exemple : IntersectionObserver pour les animations
   const callback = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -9,28 +11,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-  // Options pour l'IntersectionObserver
   const options = {
-    threshold: 0.1, // Pourcentage d'intersection pour déclencher l'apparition
+    threshold: 0.1,
   };
 
-  // Créer un nouvel observer
   const observer = new IntersectionObserver(callback, options);
 
-  // Sélectionner tous les éléments à observer
   const elementsToAnimate = document.querySelectorAll(
-    ".hero-content, .parcours-container, .parcours-extra, .creation-title, .creation-item, .contact-title, .contact-form"
+    ".hero-content, .parcours-container, .parcours-extra, .creation-title, .creation-item, .contact-title, .contact-form, .contact-info, .contact-section p"
   );
 
-  // Ajouter chaque élément à l'observer
   elementsToAnimate.forEach((element) => {
-    console.log("Observing:", element); // Debug
     observer.observe(element);
   });
-});
 
-// MENU BURGER
-document.addEventListener("DOMContentLoaded", () => {
+  // MENU BURGER
   const menuToggle = document.querySelector(".menu-toggle");
   const menuContainer = document.getElementById("primary-menu");
 
@@ -38,48 +33,39 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.classList.toggle("open");
     menuContainer.classList.toggle("open");
 
-    // Si l'élément "menuToggle" a la classe "open", ajoute la classe "cross"
     if (menuToggle.classList.contains("open")) {
       menuToggle.classList.add("cross");
       menuToggle.setAttribute("aria-expanded", "true");
     } else {
-      // Sinon, supprime la classe "cross"
       menuToggle.classList.remove("cross");
       menuToggle.setAttribute("aria-expanded", "false");
     }
   });
-});
 
-//ANIM HERO HEADER
+  //Animation du hero header avec jQuery
+  jQuery(document).ready(function ($) {
+    var roles = [
+      "Développeur Passionné",
+      "Développeur Frontend",
+      "Développeur Créatif",
+      "Développeur WordPress",
+      "Artisan du Web",
+    ];
 
-jQuery(document).ready(function ($) {
-  // Liste des rôles à afficher séquentiellement
-  var roles = [
-    "Développeur Passionné",
-    "Développeur Frontend",
-    "Développeur Créatif",
-  ];
+    var roleElement = $("#role");
+    var currentIndex = 0;
 
-  // Sélection de l'élément par son ID
-  var roleElement = $("#role");
+    function afficherRoleSuivant() {
+      roleElement.fadeOut(400, function () {
+        $(this).text(roles[currentIndex]).fadeIn(400);
+      });
 
-  // Index pour parcourir les rôles séquentiellement
-  var currentIndex = 0;
-
-  // Fonction pour afficher le rôle suivant
-  function afficherRoleSuivant() {
-    // Afficher le rôle courant
-    roleElement.fadeOut(400, function () {
-      $(this).text(roles[currentIndex]).fadeIn(400);
-    });
-
-    // Passer au rôle suivant
-    currentIndex++;
-    if (currentIndex >= roles.length) {
-      currentIndex = 0; // Revenir au début de la liste une fois arrivé à la fin
+      currentIndex++;
+      if (currentIndex >= roles.length) {
+        currentIndex = 0;
+      }
     }
-  }
 
-  // Appel initial et intervalle pour changer le rôle toutes les 3 secondes
-  setInterval(afficherRoleSuivant, 3000); // Changer toutes les 3 secondes
+    setInterval(afficherRoleSuivant, 3000);
+  });
 });
