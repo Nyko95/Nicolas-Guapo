@@ -80,14 +80,15 @@
 @media (max-width: 768px) {
   .site-header {
     position: relative; // Positionnement relatif pour établir un contexte de positionnement
-
     z-index: 1000; // Z-index élevé pour s'assurer que le header reste au-dessus
   }
+
   .site-logo {
-    margin-left: 100px;
+    margin-left: 20px;
     margin-top: 3px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
+
   .menu-toggle {
     display: block; // Affichage du bouton de menu burger
     background: transparent; // Fond transparent
@@ -96,12 +97,12 @@
     position: relative; // Positionnement relatif
     z-index: 1001; // Z-index élevé pour s'assurer qu'il est au-dessus des autres éléments
     top: -26px; // Ajustement de la position verticale
-    margin-left: 25px; // Marge à gauche
+    margin-left: 10px; // Réduction de la marge à gauche pour décaler vers la gauche
 
     .menu-toggle-icon {
       display: flex; // Affichage en flexbox
       flex-direction: column; // Direction des colonnes pour les lignes du menu
-      justify-content: space-around; // Espace réparti autour des lignes
+      justify-content: space-between; // Espace réparti autour des lignes
       width: 2rem; // Largeur
       height: 2rem; // Hauteur
 

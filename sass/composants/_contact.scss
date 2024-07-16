@@ -9,6 +9,7 @@
     width: 100%;
     max-width: 1000px;
     padding: 0 20px;
+    text-align: center; /* Centre le conteneur */
 
     p {
       display: flex;
@@ -34,11 +35,15 @@
     font-size: 4em;
     margin-bottom: 30px;
     color: #333;
-    border: solid;
+    border: solid 2px;
+    display: inline-block; //Ajuste la bordure à la largeur du texte
+    padding: 10px 100px; /* Ajoute du padding pour aérer le cadre */
     opacity: 0; // Initialement caché
     transform: translateY(100px); // Position initiale pour l'effet de montée
     transition: opacity 2s ease, transform 2s ease; // Transition pour l'opacité et la position
-
+    @media (max-width: 768px) {
+      font-size: 2em;
+    }
     &.is-visible {
       opacity: 1; // Rendre visible
       transform: translateY(0); // Déplacer à la position finale
@@ -58,7 +63,7 @@
     flex-direction: column;
     justify-content: center;
     flex: 1;
-    padding: 50px;
+    padding: 40px;
     border-radius: 10px;
     opacity: 0; // Initialement caché
     transform: translateY(100px); // Position initiale pour l'effet de montée
@@ -91,7 +96,9 @@
       font-weight: bold;
     }
   }
-
+  .contact-item .caveat-font {
+    margin-right: 180px; // Ajuster la marge pour corriger le décalage de l'élément "Email"
+  }
   .contact-form {
     flex: 1;
     border-radius: 10px;

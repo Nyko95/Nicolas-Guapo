@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // FADE IN SUR CHAQUES SECTIONS
 
-  // Exemple : IntersectionObserver pour les animations
   const callback = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -18,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver(callback, options);
 
   const elementsToAnimate = document.querySelectorAll(
-    ".hero-content, .parcours-container, .parcours-extra, .creation-title, .creation-item, .contact-title, .contact-form, .contact-info, .contact-section p"
+    ".hero-content, .parcours-container, .parcours-extra, .creation-title, .creation-item, .contact-title, .contact-form, .contact-info, .contact-section p, .contact-item"
   );
 
   elementsToAnimate.forEach((element) => {

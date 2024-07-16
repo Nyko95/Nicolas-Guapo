@@ -1,18 +1,13 @@
 .creation {
   padding: 50px 0;
-  background: linear-gradient(
-    to bottom,
-    #2caeb4,
-    /* Vert profond */ #50bba3,
-    /* Vert bleuté */ #75c993,
-    /* Vert moyen */ #a3d680 /* Vert clair */
-  );
+  background: linear-gradient(to bottom, #2caeb4, #50bba3, #75c993, #a3d680);
 
   .container {
     display: block;
-    max-width: 1200px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 0 20px;
+    text-align: center;
   }
 
   .creation-title {
@@ -20,22 +15,39 @@
     font-size: 3em;
     margin-bottom: 100px;
     color: #333;
-    border: solid;
-    opacity: 0; // Initialement caché
-    transform: translateY(100px); // Position initiale pour l'effet de montée
-    transition: opacity 2s ease, transform 2s ease; // Transition pour l'opacité et la position
+    border: solid 2px;
+    display: inline-block;
+    padding: 10px 100px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 2s ease, transform 2s ease;
 
     &.is-visible {
-      opacity: 1; // Rendre visible
-      transform: translateY(0); // Déplacer à la position finale
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
   .creation-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    justify-content: center; /* Centrer horizontalement */
+    .swiper-container {
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 300px;
+      height: auto;
+      margin: 0 20px; // Espace entre les diapositives
+      flex-shrink: 0; // Empêcher le rétrécissement des diapositives
+    }
   }
 
   .creation-item {
@@ -44,13 +56,13 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
-    transition: opacity 1s ease, transform 1s ease; // Transition pour l'opacité et la position
-    opacity: 0; // Initialement caché
-    transform: translateY(100px); // Position initiale pour l'effet de montée
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(100px);
 
     &.is-visible {
-      opacity: 1; // Rendre visible
-      transform: translateY(0); // Déplacer à la position finale
+      opacity: 1;
+      transform: translateY(0);
     }
 
     &:hover {
@@ -69,6 +81,7 @@
       margin: 15px 0 10px;
       color: #333;
     }
+
     a {
       color: black;
     }
@@ -107,7 +120,7 @@
     padding: 0 15px;
   }
 
-  .creation-list {
-    grid-template-columns: 1fr; /* Un seul article par ligne sur les petits écrans */
+  .creation-list .swiper-slide {
+    width: 100%;
   }
 }

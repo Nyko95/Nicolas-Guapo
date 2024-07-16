@@ -13,6 +13,9 @@ add_action('after_setup_theme', 'nicolas_guapo_setup');
 function nicolas_guapo_enqueue_styles() {
     // Charger la police Poppins depuis Google Fonts
     wp_enqueue_style('nicolas-guapo-google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    
+    // Charger la police Caveat depuis Google Fonts
+    wp_enqueue_style('nicolas-guapo-caveat-font', 'https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
 }
 add_action('wp_enqueue_scripts', 'nicolas_guapo_enqueue_styles');
 
@@ -27,8 +30,7 @@ function nicolas_guapo_scripts() {
 add_action('wp_enqueue_scripts', 'nicolas_guapo_scripts');
 
 // Fonction pour charger les styles CSS générés à partir de Sass
-function nicolas_guapo_custom_styles()
-{
+function nicolas_guapo_custom_styles() {
     // Déclarer le fichier CSS généré à partir de Sass
     wp_enqueue_style(
         'nicolas-guapo-custom-css',
@@ -39,29 +41,33 @@ function nicolas_guapo_custom_styles()
 }
 add_action('wp_enqueue_scripts', 'nicolas_guapo_custom_styles');
 
-// Fonction pour ajouter le bouton "Retour en haut" sur toutes les pages
-function nicolas_guapo_back_to_top_script() {
-    ?>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const backToTopBtn = document.getElementById("backToTopBtn");
+//PARTIE CREATION AVEC SWIPERJS
+// Ajouter SwiperJS
+function nicolas_guapo_enqueue_swiper() {
+    // Ajouter le CSS de Swiper
+    wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
 
-        // Afficher le bouton lorsque l'utilisateur fait défiler la page
-        window.onscroll = function () {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                backToTopBtn.style.display = "block";
-            } else {
-                backToTopBtn.style.display = "none";
-            }
-        };
+    // Ajouter le JS de Swiper
+    wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
 
-        // Remonter en haut de la page lorsque le bouton est cliqué
-        backToTopBtn.onclick = function () {
-            document.body.scrollTop = 0; // Pour Safari
-            document.documentElement.scrollTop = 0; // Pour Chrome, Firefox, IE et Opera
-        };
-    });
-    </script>
-    <?php
+    // Ajouter un script personnalisé pour initialiser Swiper
+    wp_add_inline_script('swiper-js', "
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.swiper-container', {
+                loop: true,
+                initialSlide: 1,
+                slidesPerView: 'auto', // Utiliser 'auto' pour un centrage dynamique
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        });
+    ");
 }
-add_action('wp_footer', 'nicolas_guapo_back_to_top_script');
+add_action('wp_enqueue_scripts', 'nicolas_guapo_enqueue_swiper');
