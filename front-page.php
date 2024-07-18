@@ -32,6 +32,10 @@
     </div>
 </section>
 
+
+<!--Inclusion du fichier "competences" -->
+<?php get_template_part('template-parts/competence'); ?>
+
 <!--Inclusion du fichier "creation" -->
 <?php get_template_part('template-parts/creation'); ?>
 

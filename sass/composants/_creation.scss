@@ -1,10 +1,10 @@
 .creation {
   padding: 50px 0;
-  background: linear-gradient(to bottom, #2caeb4, #50bba3, #75c993, #a3d680);
 
+  background: linear-gradient(to bottom, #a3d680, #75c993, #50bba3, #2caeb4);
   .container {
     display: block;
-    max-width: 500px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 0 20px;
     text-align: center;
@@ -16,6 +16,7 @@
     margin-bottom: 100px;
     color: #333;
     border: solid 2px;
+    border-radius: 10px;
     display: inline-block;
     padding: 10px 100px;
     opacity: 0;
@@ -26,27 +27,41 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    @media (max-width: 768px) {
+      font-size: 2em;
+      margin-bottom: 50px;
+      padding: 10px 50px;
+    }
   }
 
   .creation-list {
     .swiper-container {
       width: 100%;
       padding: 20px 0;
+      position: relative;
     }
 
     .swiper-wrapper {
       display: flex;
-      justify-content: center;
     }
 
     .swiper-slide {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 300px;
+      justify-content: center;
+      background: none;
+      border: solid;
+      border-radius: 25px;
+      text-align: center;
+      width: 400px;
       height: auto;
-      margin: 0 20px; // Espace entre les diapositives
-      flex-shrink: 0; // Empêcher le rétrécissement des diapositives
+      /* flex-shrink: 0; // Empêcher le rétrécissement des diapositives */
+
+      @media (max-width: 768px) {
+        width: 35%;
+      }
     }
   }
 
@@ -80,6 +95,11 @@
       font-size: 1.5em;
       margin: 15px 0 10px;
       color: #333;
+
+      @media (max-width: 768px) {
+        font-size: 1.2em;
+        margin: 10px 0 5px;
+      }
     }
 
     a {
@@ -87,22 +107,22 @@
     }
 
     p {
-      font-size: 1em;
-      color: #666;
+      font-size: 0.9em;
+      color: rgb(65, 66, 64);
       padding: 0 10px 20px;
+      font-weight: 600;
+
+      @media (max-width: 768px) {
+        font-size: 0.8em;
+        padding: 0 10px 15px;
+      }
     }
 
     .btn {
       display: inline-block;
       padding: 10px 20px;
       margin: 10px 0;
-      background: linear-gradient(
-        to bottom,
-        #2caeb4,
-        #50bba3,
-        #75c993,
-        #a3d680
-      );
+      background: linear-gradient(to bottom, #50bba3, #75c993, #a3d680);
       color: black;
       text-decoration: none;
       border-radius: 5px;
@@ -110,6 +130,10 @@
 
       &:hover {
         background-color: #555;
+      }
+
+      @media (max-width: 768px) {
+        padding: 8px 15px;
       }
     }
   }

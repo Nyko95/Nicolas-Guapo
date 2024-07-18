@@ -1,0 +1,88 @@
+#competences {
+  padding: 50px 0;
+  background: linear-gradient(to bottom, #2caeb4, #50bba3, #75c993, #a3d680);
+
+  .container {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .competences-title {
+    font-size: 3em;
+    margin: 0 auto 70px auto;
+    color: #333;
+    border: solid 2px;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px 100px;
+    text-align: center;
+    opacity: 0; // Initialement caché
+    transform: translateY(100px); // Position initiale pour l'effet de montée
+    transition: opacity 2s ease, transform 2s ease; // Transition pour l'opacité et la position
+
+    &.is-visible {
+      opacity: 1; // Rendre visible
+      transform: translateY(0); // Déplacer à la position finale
+    }
+  }
+
+  .competences-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    .competence {
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      flex: 1 1 calc(20% - 40px);
+      max-width: 400px;
+      min-width: 300px;
+      opacity: 0; // Initialement caché
+      transform: translateY(100px); // Position initiale pour l'effet de montée
+      transition: opacity 2s ease, transform 2s ease; // Transition pour l'opacité et la position
+
+      &.is-visible {
+        opacity: 1; // Rendre visible
+        transform: translateY(0); // Déplacer à la position finale
+      }
+
+      .competence-icon {
+        font-size: 3em;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .percentage {
+        font-size: 1.2em;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1em;
+        color: rgb(65, 66, 64);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #competences .competences-title {
+    font-size: 2em;
+  }
+
+  #competences .competences-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

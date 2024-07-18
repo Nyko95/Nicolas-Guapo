@@ -8,7 +8,7 @@
                 // Utilisation de WP_Query pour récupérer les projets
                 $args = array(
                     'post_type' => 'creation',
-                    'posts_per_page' => 6 // Nombre de projets à afficher
+                    'posts_per_page' => 5 // Nombre de projets à afficher
                 );
                 $creation_query = new WP_Query($args);
 
@@ -39,11 +39,6 @@
             </div>
         </div>
 
-        <!-- Ajouter les boutons de navigation -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-
-        <!-- Ajouter les paginations -->
-        <div class="swiper-pagination"></div>
+        
     </div>
 </section>

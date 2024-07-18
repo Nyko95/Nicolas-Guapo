@@ -41,8 +41,10 @@ function nicolas_guapo_custom_styles() {
 }
 add_action('wp_enqueue_scripts', 'nicolas_guapo_custom_styles');
 
-//PARTIE CREATION AVEC SWIPERJS
-// Ajouter SwiperJS
+
+//SWIPER POUR LA SECTION "CREATION"
+
+// Fonction pour ajouter SwiperJS
 function nicolas_guapo_enqueue_swiper() {
     // Ajouter le CSS de Swiper
     wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
@@ -54,17 +56,23 @@ function nicolas_guapo_enqueue_swiper() {
     wp_add_inline_script('swiper-js', "
         document.addEventListener('DOMContentLoaded', function () {
             const swiper = new Swiper('.swiper-container', {
+                effect: 'coverflow',
+                grabCursor: true,
+                slidesPerView: 'auto',
+                slidesPerGroup: 1,
+                centeredSlides: true,
+                spaceBetween: 15,
                 loop: true,
-                initialSlide: 1,
-                slidesPerView: 'auto', // Utiliser 'auto' pour un centrage dynamique
-                spaceBetween: 20,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                coverflowEffect: {
+                    depth: 0,
+                    modifier: 1,
+                    rotate: 60,
+                    scale: 0.6,
+                    slideShadows: true,
+                    stretch: 0,
                 },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
+                autoplay: {
+                    delay: 4000,
                 },
             });
         });
