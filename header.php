@@ -33,24 +33,12 @@
                     <li class="menu-item menu-item-accueil">
                         <a href="<?php echo esc_url(home_url('/')); ?>">Accueil</a>
                     </li>
-                    <!-- Liens vers les sections -->
-                    <li class="menu-item">
-                        <a href="#parcours">À propos</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#competences">Compétences</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#creation">Création</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#contact">Contact</a>
-                    </li>
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'menu-principal',
                         'container' => false,
-                        
+                        'items_wrap' => '%3$s', // Enveloppe les items sans créer de nouvelle balise UL
+                        'fallback_cb' => false,
                     ));
                     ?>
                 </ul>
@@ -58,6 +46,5 @@
         </div>
     </header>
     <?php wp_footer(); ?>
-   
 </body>
 </html>

@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  /*CARROUSEL AVEC SWIPERJS*/
+  /*CARROUSEL DE LA SECTION CREATION AVEC SWIPERJS*/
+
   // Crée une nouvelle instance de Swiper et définit les options du carrousel
   const swiper = new Swiper(".swiper-container", {
     // Effet de transition pour les diapositives du carrousel
