@@ -729,7 +729,7 @@
 .contact-section .container p {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 2s ease, transform 2s ease;
@@ -795,6 +795,7 @@
   font-size: 1.5em;
   margin-right: 10px;
   color: #333;
+  margin-bottom: 40px;
 }
 .contact-section .contact-info .contact-item span {
   color: #333;
@@ -840,6 +841,7 @@
   box-sizing: border-box;
   outline: none;
   transition: border-color 0.3s;
+  margin-bottom: 50px;
 }
 .contact-section input[type=text]:focus,
 .contact-section input[type=email]:focus,
@@ -877,6 +879,7 @@
   .contact-info,
   .contact-form {
     max-width: 100%;
+    margin-top: 50px;
   }
   .contact-info::after {
     display: none;

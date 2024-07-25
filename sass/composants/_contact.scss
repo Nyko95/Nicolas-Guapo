@@ -14,7 +14,7 @@
     p {
       display: flex;
       justify-content: center;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       opacity: 0; // Initialement caché
       transform: translateY(100px); // Position initiale pour l'effet de montée
       transition: opacity 2s ease, transform 2s ease; // Transition pour l'opacité et la position
@@ -84,6 +84,7 @@
         font-size: 1.5em;
         margin-right: 10px;
         color: #333;
+        margin-bottom: 40px;
       }
 
       span {
@@ -136,6 +137,7 @@
     box-sizing: border-box;
     outline: none;
     transition: border-color 0.3s;
+    margin-bottom: 50px;
   }
 
   input[type="text"]:focus,
@@ -180,6 +182,7 @@
   .contact-info,
   .contact-form {
     max-width: 100%;
+    margin-top: 50px;
   }
 
   .contact-info::after {

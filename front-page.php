@@ -11,7 +11,7 @@
         <div class="parcours-text">
             <h2 class="parcours-title">À propos de moi</h2>
             <p class="parcours-description">
-            "Ayant fait la transition de l'automobile à la programmation, j'ai troqué les rapports de vente contre des lignes de code. Pendant sept ans, j'ai perfectionné l'art du conseil commercial, guidant mes clients dans le choix de leur véhicule idéal. Aujourd'hui, je me consacre à façonner des sites web. Une passion croissante pour la technologie m'a orienté vers une nouvelle carrière : le Développement Web. Sérieux, assidu et toujours prêt à relever de nouveaux défis, j'incarne la transition d'un conseiller commercial vers un développeur passionné. <br><br>Ma philosophie ?
+            ""Ayant fait la transition de l'automobile à la programmation, j'ai troqué les rapports de vente contre des lignes de code. Pendant sept ans, j'ai perfectionné l'art du conseil commercial, guidant mes clients dans le choix de leur véhicule idéal. Aujourd'hui, je me consacre à façonner des sites web. Une passion croissante pour la technologie m'a orienté vers une nouvelle carrière : le Développement Web, que j'ai validée en suivant une formation spécialisée en tant que développeur web WordPress. Sérieux, assidu et toujours prêt à relever de nouveaux défis, j'incarne la transition d'un conseiller commercial vers un développeur passionné. <br><br>Ma philosophie ?
   <br><br>
   <span class="phrase-accroche">Passer de la boîte de vitesses à la boîte de code, sans jamais caler !"</span>
             </p>
