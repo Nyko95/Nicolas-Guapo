@@ -11,7 +11,7 @@
   margin-top: 14px;
 }
 
-.container {
+.site-header.container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -281,7 +281,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 20px;
-  gap: 140px;
+  gap: 40px;
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 2s ease, transform 2s ease;
@@ -335,7 +335,8 @@
     text-align: center;
   }
   .parcours .parcours-container .parcours-image {
-    display: none;
+    /* display: none; */
+    max-width: 80%;
   }
 }
 .parcours .parcours-extra {
@@ -418,9 +419,278 @@
     margin-bottom: 15px;
   }
 }
+#competences {
+  padding: 50px 0;
+  background: linear-gradient(to bottom, #2caeb4, #50bba3, #75c993, #a3d680);
+}
+#competences .container {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+#competences .competences-title {
+  font-size: 3em;
+  margin: 0 auto 70px auto;
+  color: #333;
+  border: solid 2px;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px 100px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+#competences .competences-title.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#competences .competences-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+#competences .competences-grid .competence {
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 calc(20% - 40px);
+  max-width: 400px;
+  min-width: 300px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+#competences .competences-grid .competence.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#competences .competences-grid .competence .competence-icon {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+#competences .competences-grid .competence h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+#competences .competences-grid .competence .percentage {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+#competences .competences-grid .competence p {
+  font-size: 1em;
+  color: rgb(65, 66, 64);
+}
+
+@media (max-width: 768px) {
+  #competences .competences-title {
+    font-size: 1.6em;
+    padding: 10px 70px;
+  }
+  #competences .competences-grid {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+.services-section {
+  text-align: center;
+  padding: 50px 0;
+  display: block;
+  background: linear-gradient(to bottom, #a3d680, #75c993, #50bba3, #2caeb4);
+}
+.services-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services-section .section-title {
+  font-size: 3em;
+  margin: 0 auto 70px auto;
+  color: #333;
+  border: solid 2px;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px 100px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+.services-section .section-title.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.services-section .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+.services-section .service-item {
+  background-color: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent pour mettre en valeur le dégradé */
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.services-section .service-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Ajout d'une ombre lors du hover */
+}
+.services-section .service-item a {
+  text-decoration: none;
+  color: inherit;
+}
+.services-section .service-item .service-image {
+  margin-bottom: 15px;
+}
+.services-section .service-item .service-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+.services-section .service-item .service-title {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+.services-section .service-item .service-excerpt {
+  color: #555; /* Couleur légèrement plus foncée pour une meilleure lisibilité */
+  margin-bottom: 15px;
+}
+.services-section .service-item .service-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #5a67d8;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.services-section .service-item .service-link:hover {
+  background-color: #434190;
+}
+
+.service-detail {
+  padding: 60px 0;
+  background: linear-gradient(to bottom, #2caeb4, #50bba3, #75c993, #a3d680);
+  text-align: center;
+  display: block;
+}
+.service-detail .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  display: block;
+}
+.service-detail .service-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.service-detail .service-header h1 {
+  font-size: 3.5em;
+  background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.service-detail .service-header .service-date {
+  font-size: 1.2em;
+  color: #feb47b;
+}
+.service-detail .service-content {
+  background-color: #222;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  margin: 0 auto;
+}
+.service-detail .service-content .service-description p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+.service-detail .service-content .service-description h3 {
+  font-size: 28px;
+  color: #ff7e5f;
+}
+.service-detail .service-content .service-description h4 {
+  font-size: 24px;
+  color: #feb47b;
+}
+.service-detail .service-content .service-description .features-list {
+  margin-top: 20px;
+  text-align: left;
+  color: #ddd;
+  list-style: none;
+  padding: 0;
+}
+.service-detail .service-content .service-description .features-list li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+}
+.service-detail .service-content .service-description .features-list li:before {
+  content: "✔";
+  margin-right: 10px;
+  color: #ff7e5f;
+}
+.service-detail .service-content .service-pricing {
+  margin-top: 30px;
+  color: #ff7e5f;
+  font-size: 2em;
+}
+.service-detail .service-content .cta {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.service-detail .service-content .cta .btn {
+  background-color: #ff7e5f;
+  color: #fff;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.service-detail .service-content .cta .btn:hover {
+  background-color: #feb47b;
+}
+
+@media (max-width: 768px) {
+  .service-detail {
+    padding: 40px 0;
+  }
+  .service-detail .service-header h1 {
+    font-size: 2.5em;
+  }
+  .service-detail .service-content {
+    padding: 20px;
+    max-width: 100%;
+  }
+  .service-detail .service-content .service-description p {
+    font-size: 1em;
+  }
+  .service-detail .service-content .service-pricing {
+    font-size: 1.5em;
+  }
+}
 .creation {
   padding: 50px 0;
-  background: linear-gradient(to bottom, #a3d680, #75c993, #50bba3, #2caeb4);
+  background: linear-gradient(to bottom, #2caeb4, #50bba3, #75c993, #a3d680);
 }
 .creation .container {
   display: block;
@@ -560,7 +830,8 @@
 .creation-detail {
   padding: 50px 0;
   background-color: black;
-  display: ruby;
+  display: block;
+  text-align: -webkit-center;
 }
 .creation-detail .container {
   max-width: 1200px;
@@ -623,6 +894,7 @@
 }
 .creation-detail .creation-content .creation-description h3 {
   font-size: 30px;
+  text-decoration: underline;
 }
 .creation-detail .creation-content .creation-description h4 {
   font-size: 25px;
@@ -715,7 +987,7 @@
 }
 .contact-section {
   padding: 50px 0;
-  background: linear-gradient(to bottom, #2caeb4, #50bba3, #75c993, #a3d680);
+  background: linear-gradient(to bottom, #a3d680, #75c993, #50bba3, #2caeb4);
   display: flex;
   justify-content: center;
 }
@@ -883,84 +1155,6 @@
   }
   .contact-info::after {
     display: none;
-  }
-}
-#competences {
-  padding: 50px 0;
-  background: linear-gradient(to bottom, #2caeb4, #50bba3, #75c993, #a3d680);
-}
-#competences .container {
-  display: block;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  text-align: center;
-}
-#competences .competences-title {
-  font-size: 3em;
-  margin: 0 auto 70px auto;
-  color: #333;
-  border: solid 2px;
-  border-radius: 10px;
-  display: inline-block;
-  padding: 10px 100px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 2s ease, transform 2s ease;
-}
-#competences .competences-title.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-#competences .competences-grid {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 50px;
-}
-#competences .competences-grid .competence {
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  flex: 1 1 calc(20% - 40px);
-  max-width: 400px;
-  min-width: 300px;
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 2s ease, transform 2s ease;
-}
-#competences .competences-grid .competence.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-#competences .competences-grid .competence .competence-icon {
-  font-size: 3em;
-  margin-bottom: 10px;
-}
-#competences .competences-grid .competence h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  color: #333;
-}
-#competences .competences-grid .competence .percentage {
-  font-size: 1.2em;
-  color: #333;
-  margin-bottom: 10px;
-}
-#competences .competences-grid .competence p {
-  font-size: 1em;
-  color: rgb(65, 66, 64);
-}
-
-@media (max-width: 768px) {
-  #competences .competences-title {
-    font-size: 1.6em;
-    padding: 10px 70px;
-  }
-  #competences .competences-grid {
-    flex-direction: column;
-    align-items: center;
   }
 }
 body {

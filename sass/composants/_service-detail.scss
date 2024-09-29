@@ -1,0 +1,137 @@
+.service-detail {
+  padding: 60px 0;
+  background: linear-gradient(
+    to bottom,
+    #2caeb4,
+    /* Vert profond */ #50bba3,
+    /* Vert bleuté */ #75c993,
+    /* Vert moyen */ #a3d680 /* Vert clair */
+  );
+  text-align: center;
+  display: block;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    display: block;
+  }
+
+  .service-header {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h1 {
+      font-size: 3.5em;
+      background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .service-date {
+      font-size: 1.2em;
+      color: #feb47b;
+    }
+  }
+
+  .service-content {
+    background-color: #222;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    margin: 0 auto;
+
+    .service-description {
+      p {
+        font-size: 1.1em;
+        line-height: 1.7;
+        color: #ddd;
+        margin-bottom: 30px;
+      }
+
+      h3 {
+        font-size: 28px;
+        color: #ff7e5f;
+      }
+
+      h4 {
+        font-size: 24px;
+        color: #feb47b;
+      }
+
+      .features-list {
+        margin-top: 20px;
+        text-align: left;
+        color: #ddd;
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 10px;
+          font-size: 1.1em;
+          display: flex;
+          align-items: center;
+
+          &:before {
+            content: "✔";
+            margin-right: 10px;
+            color: #ff7e5f;
+          }
+        }
+      }
+    }
+
+    .service-pricing {
+      margin-top: 30px;
+      color: #ff7e5f;
+      font-size: 2em;
+    }
+
+    .cta {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      .btn {
+        background-color: #ff7e5f;
+        color: #fff;
+        padding: 15px 25px;
+        text-decoration: none;
+        font-size: 1.2em;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #feb47b;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .service-detail {
+    padding: 40px 0;
+
+    .service-header h1 {
+      font-size: 2.5em;
+    }
+
+    .service-content {
+      padding: 20px;
+      max-width: 100%;
+
+      .service-description p {
+        font-size: 1em;
+      }
+
+      .service-pricing {
+        font-size: 1.5em;
+      }
+    }
+  }
+}

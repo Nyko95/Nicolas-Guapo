@@ -29,7 +29,7 @@
     align-items: center;
     justify-content: center;
     padding: 0 20px;
-    gap: 140px;
+    gap: 40px;
     opacity: 0; // Initialement caché
     transform: translateY(100px); // Position initiale pour l'effet de montée
     transition: opacity 2s ease, transform 2s ease; // Transition pour l'opacité et la position
@@ -85,7 +85,8 @@
       text-align: center;
 
       .parcours-image {
-        display: none;
+        /* display: none; */
+        max-width: 80%;
       }
     }
   }

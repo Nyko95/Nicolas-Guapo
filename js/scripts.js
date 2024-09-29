@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver(callback, options);
 
   const elementsToAnimate = document.querySelectorAll(
-    ".hero-content, .parcours-container, .parcours-extra, .creation-title, .creation-item, .contact-title, .contact-form, .contact-info, .contact-section p, .contact-item, .competences-title, .competence"
+    ".hero-content, .parcours-container, .parcours-extra, .creation-title, .creation-item, .contact-title, .contact-form, .contact-info, .contact-section p, .contact-item, .competences-title, .competence, .section-title"
   );
 
   elementsToAnimate.forEach((element) => {

@@ -1,0 +1,96 @@
+.services-section {
+  text-align: center;
+  padding: 50px 0;
+  display: block;
+  background: linear-gradient(to bottom, #a3d680, #75c993, #50bba3, #2caeb4);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-title {
+    font-size: 3em;
+    margin: 0 auto 70px auto;
+    color: #333;
+    border: solid 2px;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px 100px;
+    text-align: center;
+    opacity: 0; // Initialement caché
+    transform: translateY(100px); // Position initiale pour l'effet de montée
+    transition: opacity 2s ease, transform 2s ease; // Transition pour l'opacité et la position
+
+    &.is-visible {
+      opacity: 1; // Rendre visible
+      transform: translateY(0); // Déplacer à la position finale
+    }
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .service-item {
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.9
+    ); /* Fond légèrement transparent pour mettre en valeur le dégradé */
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Ajout d'une ombre lors du hover */
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .service-image {
+      margin-bottom: 15px;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .service-title {
+      font-size: 1.5rem;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .service-excerpt {
+      color: #555; /* Couleur légèrement plus foncée pour une meilleure lisibilité */
+      margin-bottom: 15px;
+    }
+
+    .service-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #5a67d8;
+      color: white;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #434190;
+      }
+    }
+  }
+}
