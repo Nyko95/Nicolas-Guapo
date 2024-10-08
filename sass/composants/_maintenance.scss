@@ -1,0 +1,77 @@
+.maintenance-package {
+  display: flex; // Utilise flexbox pour aligner le contenu et l'image
+  align-items: center; // Aligne verticalement le contenu au centre
+  justify-content: space-between; // Espace entre le contenu et l'image
+  background-color: #f9f9f9; // Fond gris clair pour le bloc
+  padding: 30px;
+  border-radius: 10px; // Coins arrondis
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Ombre légère
+  margin-top: 50px;
+
+  .maintenance-content {
+    flex: 1; // Prend toute la largeur disponible
+    margin-right: 20px; // Espace entre le texte et l'image
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 15px; // Espace sous le titre
+    }
+
+    .maintenance-price {
+      font-size: 1.5rem;
+      color: #2caeb4; // Couleur pour le prix
+      margin-bottom: 15px; // Espace sous le prix
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5; // Hauteur de ligne pour la lisibilité
+      color: #555; // Couleur de texte plus douce
+
+      // Style pour les icônes
+      i {
+        margin-right: 10px; // Espacement entre l'icône et le texte
+        color: #2caeb4; // Couleur de l'icône
+      }
+
+      // Espacement supplémentaire entre chaque ligne avec icône
+      &:not(:last-child) {
+        margin-bottom: 10px; // Espace sous chaque ligne, sauf la dernière
+      }
+    }
+  }
+
+  .maintenance-image {
+    flex: 0 0 700px; // Fixe la largeur de l'image à 300px
+    max-width: 700px; // Limite la largeur maximale de l'image
+    img {
+      max-width: 100%; // Rendre l'image responsive
+      height: auto; // Conserve le ratio de l'image
+      border-radius: 5px; // Coins arrondis pour l'image
+      display: block; // S'assure que l'image est un bloc
+      margin: 0 auto; // Centre l'image horizontalement
+    }
+  }
+}
+
+// Médias queries pour rendre le bloc responsive
+@media (max-width: 768px) {
+  .maintenance-package {
+    flex-direction: column; // Colonne sur les petits écrans
+    align-items: flex-start; // Aligne le contenu à gauche
+
+    .maintenance-content {
+      margin-right: 0; // Retire l'espace droit
+      margin-bottom: 20px; // Espace sous le contenu
+    }
+
+    .maintenance-image {
+      flex: none; // Retire la largeur fixe
+      width: 100%; // Image pleine largeur
+      img {
+        max-width: 100%; // Rendre l'image responsive
+        height: auto; // Conserve le ratio de l'image
+      }
+    }
+  }
+}

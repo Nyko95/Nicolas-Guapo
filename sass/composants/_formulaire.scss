@@ -1,0 +1,146 @@
+.contact-section {
+  width: 65%; /* Largeur du conteneur */
+  margin: 60px auto; /* Centre la section et ajoute de l'espace en haut et en bas */
+  padding: 20px; /* Ajoute de l'espace intérieur */
+  background: linear-gradient(
+    to bottom,
+    #333,
+    #000
+  ); /* Dégradé de gris à noir */
+  color: white; /* Texte blanc */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Légère ombre */
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px; /* Espace sous le titre */
+    text-align: center; /* Centrer le texte */
+    background: linear-gradient(
+      to bottom,
+      #2caeb4,
+      /* Vert profond */ #50bba3,
+      /* Vert bleuté */ #75c993,
+      /* Vert moyen */ #a3d680 /* Vert clair */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Pour s'assurer que le texte est transparent pour d'autres navigateurs */
+    display: inline-block; /* Pour
+  }
+
+  p {
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 30px; /* Espace sous le paragraphe */
+  }
+
+  .contact-form {
+    max-width: 650px; /* Limite la largeur du formulaire */
+    margin: 0 auto; /* Centre le formulaire dans le conteneur */
+    padding: 40px 20px; /* Espace intérieur du formulaire */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.1
+    ); /* Légère transparence pour le fond */
+
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour le formulaire */
+
+    input,
+    textarea {
+      width: 70%; /* Prend toute la largeur du conteneur */
+      padding: 10px; /* Réduit le rembourrage */
+      margin-bottom: 15px; /* Espacement vertical entre les champs */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem; /* Réduit la taille de la police */
+      color: #333;
+      background-color: #fff; /* Fond blanc pour les champs */
+      transition: border-color 0.3s ease;
+      box-sizing: border-box; /* Pour s'assurer que les bordures et paddings ne cassent pas la mise en page */
+
+      &:focus {
+        border-color: #2caeb4; /* Met en surbrillance le champ actif */
+      }
+    }
+
+    textarea {
+      min-height: 120px; /* Réduit la hauteur minimum pour les textarea */
+    }
+
+    input[type="submit"] {
+      width: 100%; /* Prend toute la largeur */
+      padding: 10px; /* Réduit le rembourrage du bouton */
+      background-color: #fff; /* Fond blanc pour le bouton */
+      color: black; /* Texte noir */
+      font-size: 1rem; /* Réduit la taille de la police du bouton */
+      text-transform: uppercase;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      margin: 20px auto; /* Centre le bouton et ajoute de l'espace au-dessus et en-dessous */
+
+      &:hover {
+        background-color: #7a7b7b; /* Changement de couleur au survol */
+        transform: translateY(-2px); /* Effet de soulevement */
+      }
+    }
+
+    /* Réduction de la taille du texte pour le dernier item (case à cocher) */
+    .wpcf7-form-control.wpcf7-checkbox {
+      font-size: 0.9rem; /* Réduit la taille de la police de la case à cocher */
+      margin-top: 10px; /* Ajoute de l'espace au-dessus de la case à cocher */
+      color: white; /* Assure que le texte est en blanc */
+      text-align: center; /* Centre le texte de la case à cocher */
+
+      /* Centre le bouton de la case à cocher */
+      display: flex; /* Utilise flexbox pour centrer */
+      justify-content: center; /* Centre horizontalement */
+      align-items: center; /* Centre verticalement */
+
+      .wpcf7-form-control.wpcf7-checkbox {
+        font-size: 0.9rem; /* Taille de la police pour la case à cocher */
+        margin-top: 10px; /* Espace au-dessus de la case à cocher */
+        color: white; /* Couleur du texte en blanc */
+        text-align: center; /* Centre le texte de la case à cocher */
+        display: flex; /* Utilisation de flexbox pour centrer */
+        justify-content: center; /* Centre horizontalement */
+        align-items: center; /* Centre verticalement */
+
+        input[type="checkbox"] {
+          width: auto; /* Réduit la largeur du checkbox */
+          height: auto; /* Réduit la hauteur si nécessaire */
+          margin-right: 5px; /* Réduit l'espace entre la case et le texte */
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 90%; /* Réduit la largeur du conteneur sur les petits écrans */
+    padding: 10px; /* Réduit l'espace intérieur sur les petits écrans */
+
+    .contact-form {
+      padding: 20px; /* Réduit l'espace intérieur du formulaire sur les petits écrans */
+
+      input,
+      textarea {
+        padding: 10px; /* Réduit le rembourrage des champs sur les petits écrans */
+        font-size: 1rem; /* Ajuste la taille de la police des champs sur les petits écrans */
+      }
+
+      input[type="submit"] {
+        padding: 12px; /* Ajuste le rembourrage du bouton sur les petits écrans */
+        font-size: 1rem; /* Réduit la taille de la police du bouton sur les petits écrans */
+      }
+
+      /* Réduction de la taille du texte pour le dernier item (case à cocher) */
+      .wpcf7-form-control.wpcf7-checkbox {
+        font-size: 0.8rem; /* Réduit encore la taille de la police de la case à cocher sur mobile */
+      }
+    }
+  }
+}

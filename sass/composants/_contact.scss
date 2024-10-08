@@ -1,191 +1,108 @@
-.contact-section {
-  padding: 50px 0;
-  background: linear-gradient(to bottom, #a3d680, #75c993, #50bba3, #2caeb4);
-  display: flex;
-  justify-content: center;
+.home-contact-section {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #2caeb4, #50bba3, #75c993, #a3d680);
 
   .container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: block;
-    width: 100%;
-    max-width: 1000px;
-    padding: 0 20px;
-    text-align: center; /* Centre le conteneur */
+    text-align: center;
 
-    p {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 30px;
-      opacity: 0; // Initialement caché
-      transform: translateY(100px); // Position initiale pour l'effet de montée
-      transition: opacity 2s ease, transform 2s ease; // Transition pour l'opacité et la position
+    .contact-title {
+      font-size: 3em;
+      margin: 0 auto 70px auto;
+      color: #333;
+      border: solid 2px;
+      border-radius: 10px;
+      display: inline-block;
+      padding: 10px 100px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: opacity 2s ease, transform 2s ease;
 
       &.is-visible {
-        opacity: 1; // Rendre visible
-        transform: translateY(0); // Déplacer à la position finale
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 768px) {
+        font-size: 2.5rem; // Réduction de la taille du titre
+      }
+
+      @media (max-width: 480px) {
+        font-size: 2rem; // Réduction de la taille sur très petits écrans
       }
     }
-    .caveat-font {
-      font-family: "Caveat", cursive;
-      font-size: 2em;
-    }
-  }
 
-  .contact-title {
-    text-align: center;
-    font-size: 3em;
-    margin-bottom: 30px;
-    color: #333;
-    border: solid 2px;
-    border-radius: 10px;
-    display: inline-block; //Ajuste la bordure à la largeur du texte
-    padding: 10px 100px; /* Ajoute du padding pour aérer le cadre */
-    opacity: 0; // Initialement caché
-    transform: translateY(100px); // Position initiale pour l'effet de montée
-    transition: opacity 2s ease, transform 2s ease; // Transition pour l'opacité et la position
-    @media (max-width: 768px) {
-      font-size: 2em;
-    }
-    &.is-visible {
-      opacity: 1; // Rendre visible
-      transform: translateY(0); // Déplacer à la position finale
-    }
-  }
-
-  .contact-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    position: relative; // Ajouter cette ligne pour positionner la bordure
-  }
-
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    /* padding: 40px; */
-    border-radius: 10px;
-    opacity: 0; // Initialement caché
-    transform: translateY(100px); // Position initiale pour l'effet de montée
-    transition: opacity 2s ease, transform 2s ease; // Transition pour l'opacité et la position
-
-    &.is-visible {
-      opacity: 1; // Rendre visible
-      transform: translateY(0); // Déplacer à la position finale
-    }
-
-    .contact-item {
-      display: flex;
+    .contact-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       align-items: center;
-      margin-bottom: 50px;
+      gap: 40px;
 
-      i {
-        font-size: 1.5em;
-        margin-right: 10px;
-        color: #333;
-        margin-bottom: 40px;
+      .contact-info {
+        text-align: left;
+
+        .contact-subtitle {
+          font-size: 2rem; // Taille par défaut
+          color: #666;
+          margin-bottom: 50px;
+
+          @media (max-width: 768px) {
+            font-size: 1.2rem; // Réduction de la taille du sous-titre
+          }
+
+          @media (max-width: 480px) {
+            font-size: 1.2rem; // Réduction de la taille sur très petits écrans
+          }
+        }
+
+        .contact-button {
+          display: inline-block;
+          padding: 15px 30px; // Taille par défaut
+          background-color: #333;
+          color: #fff;
+          text-decoration: none;
+          font-size: 1.2rem;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+
+          i {
+            margin-right: 10px;
+          }
+
+          &:hover {
+            background-color: #555;
+          }
+
+          @media (max-width: 768px) {
+            padding: 5px 10px !important; // Padding léger sur mobile
+          }
+
+          @media (max-width: 768px) {
+            font-size: 0.9rem; // Réduction de la taille du texte du bouton
+          }
+        }
       }
 
-      span {
-        color: #333;
+      .contact-image {
+        text-align: right;
+
+        img {
+          max-width: 100%;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+          @media (max-width: 768px) {
+            max-width: 100%; // Agrandir l'image sur mobile
+          }
+
+          @media (max-width: 480px) {
+            max-width: 100%; // Agrandir encore plus sur très petits écrans
+          }
+        }
       }
     }
-
-    .caveat-font {
-      font-family: "Caveat", cursive;
-      font-size: 2em;
-      font-weight: bold;
-    }
-  }
-  .contact-item .caveat-font {
-    margin-right: 180px; // Ajuster la marge pour corriger le décalage de l'élément "Email"
-  }
-  .contact-form {
-    flex: 1;
-    border-radius: 10px;
-    margin-top: 20px;
-    opacity: 0; // Initialement caché
-    transform: translateY(100px); // Position initiale pour l'effet de montée
-    transition: opacity 2s ease, transform 2s ease; // Transition pour l'opacité et la position
-
-    &.is-visible {
-      opacity: 1; // Rendre visible
-      transform: translateY(0); // Déplacer à la position finale
-    }
-  }
-
-  .contact-info::after {
-    content: "";
-    position: absolute;
-    top: 200px;
-    bottom: 200px;
-    left: 90%;
-    transform: translateX(-50%);
-    width: 1px;
-    border-left: /* 1px dashed #000;  */ 2px dashed #e0e0e0;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: calc(100% - 24px);
-    padding: 20px 15px;
-    font-size: 13px;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    box-sizing: border-box;
-    outline: none;
-    transition: border-color 0.3s;
-    margin-bottom: 50px;
-  }
-
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  textarea:focus {
-    border-color: black;
-    box-shadow: 0 0 5px #2e353c80;
-  }
-
-  textarea {
-    resize: vertical;
-    height: 120px;
-  }
-
-  input[type="submit"] {
-    width: 100%;
-    padding: 17px;
-    background-color: black;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 16px;
-    margin-left: 77px;
-  }
-
-  input[type="submit"]:hover {
-    background-color: #3b4045;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-title {
-    font-size: 2em;
-  }
-
-  .contact-content {
-    flex-direction: column;
-  }
-
-  .contact-info,
-  .contact-form {
-    max-width: 100%;
-    margin-top: 50px;
-  }
-
-  .contact-info::after {
-    display: none;
   }
 }

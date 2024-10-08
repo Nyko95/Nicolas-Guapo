@@ -1,0 +1,157 @@
+.services-tarifs-container {
+  padding: 50px;
+  background: linear-gradient(
+    to bottom,
+    #a3d680,
+    // Vert clair
+    #75c993,
+    // Vert moyen
+    #50bba3,
+    // Vert bleuté
+    #2caeb4 // Vert profond
+  );
+  color: #333;
+
+  .services-title {
+    font-size: 3.6rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .services-intro {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+  .info-text {
+    font-style: italic;
+    color: #808080;
+  }
+  .creations-button {
+    text-align: center;
+    margin-bottom: 50px;
+
+    .btn {
+      background-color: black;
+      color: #fff;
+      padding: 20px 50px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #45434b;
+    }
+  }
+
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap; // Permet aux éléments de se replier sur plusieurs lignes si nécessaire
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    .service-block {
+      flex: 1;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.2);
+      min-width: 300px; // Définit une largeur minimale pour les blocs de services
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 15px; // Espace entre le titre et la description
+        text-align: center;
+      }
+
+      .service-description {
+        font-size: 1rem;
+        margin-bottom: 15px; // Espace entre la description et le tarif
+      }
+
+      .service-price {
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px; // Espace entre le tarif et les détails
+        color: #2caeb4;
+        border-bottom: solid;
+      }
+
+      .service-details {
+        list-style: none;
+        padding: 0;
+
+        .icon-space {
+          margin-right: 10px;
+        }
+
+        li {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px; // Espace entre les éléments de la liste
+
+          img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px; // Espace entre l'icône et le texte
+          }
+        }
+      }
+    }
+  }
+}
+
+// Médias queries pour rendre la page responsive
+@media (max-width: 768px) {
+  .services-tarifs-container {
+    padding: 30px;
+
+    .services-title {
+      font-size: 2.5rem;
+    }
+
+    .services-intro {
+      font-size: 1.1rem;
+    }
+
+    .services-grid {
+      flex-direction: column; // Aligne les blocs de services en colonne sur les petits écrans
+      gap: 15px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .services-tarifs-container {
+    padding: 20px;
+
+    .services-title {
+      font-size: 2rem;
+    }
+
+    .services-intro {
+      font-size: 1rem;
+    }
+
+    .btn {
+      padding: 8px 15px; // Réduit la taille du bouton sur les petits écrans
+    }
+
+    .service-block {
+      padding: 15px; // Réduit le padding dans les blocs de service
+    }
+
+    .service-price {
+      font-size: 1rem; // Ajuste la taille du prix
+    }
+
+    .service-description {
+      font-size: 0.9rem; // Ajuste la taille de la description
+    }
+  }
+}

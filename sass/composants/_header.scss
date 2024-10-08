@@ -19,6 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 140px;
 }
 
 .site-logo {
@@ -76,11 +77,10 @@
 }
 
 // Media queries pour les tablettes et mobiles (MENU BURGER)
-
 @media (max-width: 768px) {
   .site-header {
-    position: relative; // Positionnement relatif pour établir un contexte de positionnement
-    z-index: 1000; // Z-index élevé pour s'assurer que le header reste au-dessus
+    position: relative;
+    z-index: 1000;
   }
 
   .site-logo {
@@ -90,101 +90,113 @@
   }
 
   .menu-toggle {
-    display: block; // Affichage du bouton de menu burger
-    background: transparent; // Fond transparent
+    display: flex; // Utiliser flex pour centrer le contenu
+    justify-content: center; // Centrer horizontalement
+    align-items: center; // Centrer verticalement
+    background-color: #ffd700; // Couleur de fond du carré
     border: none; // Pas de bordure
     cursor: pointer; // Curseur pointeur
     position: relative; // Positionnement relatif
-    z-index: 1001; // Z-index élevé pour s'assurer qu'il est au-dessus des autres éléments
-    top: -26px; // Ajustement de la position verticale
-    margin-left: 10px; // Réduction de la marge à gauche pour décaler vers la gauche
+    z-index: 1001; // Élever le z-index
+    width: 60px; // Largeur du carré (ajustée)
+    height: 60px; // Hauteur du carré (ajustée)
+    margin-left: 10px; // Ajustement à gauche si nécessaire
+    margin-bottom: 25px; // Ajustement en haut si nécessaire
+    margin-right: 20px;
 
     .menu-toggle-icon {
-      display: flex; // Affichage en flexbox
-      flex-direction: column; // Direction des colonnes pour les lignes du menu
-      justify-content: space-between; // Espace réparti autour des lignes
-      width: 2rem; // Largeur
-      height: 2rem; // Hauteur
+      display: flex;
+      flex-direction: column;
+      justify-content: center; // Centrer les spans
+      align-items: center; // Centrer les spans
+      width: 2rem; // Largeur des spans (ajustée pour plus de taille)
+      height: 2rem; // Hauteur des spans (ajustée pour plus de taille)
 
       span {
-        width: 1.5rem; // Largeur des lignes
-        height: 0.2rem; // Hauteur des lignes
-        background: #000; // Couleur de fond des lignes
-        transition: transform 0.3s ease, opacity 0.3s ease; // Transition des transformations
+        width: 1.2rem; // Largeur des lignes (ajustée pour plus de taille)
+        height: 0.25rem; // Épaisseur des lignes (ajustée pour plus de taille)
+        background: black; // Couleur blanche
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        display: block;
+        margin: 4px 0; // Écarter les spans lorsqu'ils sont fermés
+
+        // Ajustements pour écarter les spans lorsqu'ils sont fermés
+        &.closed {
+          transform: translateY(0); // Pas de translation lorsqu'ils sont fermés
+        }
       }
     }
-
+    // Ajustements pour une croix bien centrée et équilibrée
     &.cross .menu-toggle-icon span:nth-child(1) {
-      transform: rotate(-45deg) translate(1px, 6px); // Transformation pour créer la croix
+      transform-origin: -5% 150%; // Origine de la transformation en haut à gauche
+      transform: rotate(45deg) translate(0px, 0); // Ajustement pour former la croix
     }
 
     &.cross .menu-toggle-icon span:nth-child(2) {
-      opacity: 0; // Masquage de la deuxième ligne de la croix
+      opacity: 0; // Masquage de la ligne centrale
     }
 
     &.cross .menu-toggle-icon span:nth-child(3) {
-      transform: rotate(45deg) translate(-8px, -17px); // Transformation pour créer la croix
+      transform-origin: 0% -180%; // Origine de la transformation en bas à gauche
+      transform: rotate(-45deg) translate(0, -5px); // Ajustement pour former la croix
     }
   }
 
   .main-navigation {
-    display: flex; // Affichage en flexbox
-    flex-direction: column; // Direction des colonnes pour les éléments du menu
-    position: absolute; // Position absolue
-    top: 125px; // Ajustement de la position verticale en fonction de la hauteur du header
-    left: 0; // Alignement à gauche
-    width: 100%; // Largeur totale
-    background: linear-gradient(
-      to bottom,
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 125px; // Ajuste si nécessaire
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, #a3d680, #75c993, #50bba3, #2caeb4);
+    font-size: 1em;
+    text-align: center;
+    justify-content: center;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    z-index: 999;
 
-      #a3d680,
-      // Vert clair
-      #75c993,
-      // Vert moyen
-      #50bba3,
-      // Vert bleuté
-      #2caeb4 // Vert profond
-    );
-    font-size: 1.5em; // Taille de police
-    text-align: center; // Alignement du texte au centre
-    justify-content: center; // Centrage du contenu
-    height: 0; // Hauteur initiale à 0 pour l'effet de transition
-    overflow: hidden; // Masquage du contenu dépassant la hauteur
-    transition: height 0.5s ease; // Transition fluide de la hauteur
-    z-index: 999; // Z-index pour s'assurer qu'il est au-dessus du contenu mais derrière le bouton de menu
     ul li {
       list-style: none;
       padding: 0;
       margin: 0;
     }
+
     .menu {
-      list-style: none; // Suppression des puces de liste
-      padding: 0; // Aucun padding
-      margin: 0; // Aucune marge
-      width: 100%; // Largeur totale
-      justify-content: center; // Centrage des éléments du menu
-      gap: 60px; // Espacement entre les éléments
-      display: flex; // Affichage en flexbox
-      flex-direction: column; // Direction des colonnes pour les éléments du menu
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      justify-content: center;
+      gap: 40px;
+      display: flex;
+      flex-direction: column;
     }
 
     li.menu-item {
       a {
-        color: #fff; // Couleur du texte
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); // Ombre du texte
-        text-decoration: none; // Pas de soulignement
-        padding: 8px 0; // Rembourrage vertical
-        transition: background-color 0.3s ease, color 0.3s ease; // Transition de couleur
-        font-size: 25px;
+        color: #fff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        text-decoration: none;
+        padding: 4px 0;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-size: 18px;
         &:hover {
-          background-color: #f0f0f0; // Couleur de fond au survol
-          color: #333; // Couleur du texte au survol
+          background-color: #f0f0f0;
+          color: #333;
         }
       }
     }
   }
 
   .main-navigation.open {
-    height: 90vh; // Hauteur maximale lorsque le menu est ouvert
+    height: 70vh; // Hauteur du menu ouvert
+  }
+
+  // Désactiver le scroll lorsque le menu est ouvert
+  body.menu-open {
+    overflow: hidden;
   }
 }

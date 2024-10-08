@@ -2,6 +2,48 @@
 
 <?php get_template_part('template-parts/hero'); ?>
 
+<!-- Section Mes Services -->
+<section class="services">
+<div class="container">
+  <h2 class="section-title">Mes Services</h2>
+  
+  <div class="services-intro">
+    <h3 class="services-subtitle">Avoir un site professionnel pour développer son activité</h3>
+    <p>Vous n’avez pas besoin d’un site ultra-complexe pour faire passer votre message et attirer l’attention. 
+    La simplicité, lorsqu’elle est bien pensée, peut être votre meilleure alliée pour mettre en valeur votre activité et atteindre vos objectifs.</p>
+  </div>
+  
+ <!-- Bloc des questions et solutions -->
+<div class="services-blocks">
+  <!-- Bloc 1 -->
+  <div class="service-block">
+    <h4>"Pourquoi avoir un site ?"</h4>
+    <p>Pour montrer votre travail, il est devenu indispensable d’être présent sur Internet aujourd’hui.
+    Telle une vitrine de boulangerie qui nous fait envie avec ses pâtisseries, <strong>votre site donnera envie à vos clients de faire appel à vos services !</strong> <br>Votre site devient votre vitrine ouverte 24/7.</p>
+  </div>
+
+  <!-- Bloc 2 -->
+  <div class="service-block">
+    <h4>"Est-ce que créer un site coûte cher ?"</h4>
+    <p>Pas nécessairement !<br> <strong>Je propose des solutions adaptées à votre budget</strong> tout en garantissant un site optimisé et professionnel. <br>
+    Il existe toujours une <strong>option abordable</strong> pour créer un site de qualité qui répond à vos besoins sans dépasser vos moyens.</p>
+  </div>
+
+  <!-- Bloc 3 -->
+  <div class="service-block">
+    <h4>"Et si je n'ai pas le temps de m'en occuper ?"</h4>
+    <p>Pas de panique !<br> <strong>Je propose des services de maintenance</strong> qui vous permettent de vous concentrer sur votre activité.<br> Pendant ce temps, je m’assure que votre site reste à jour et fonctionne de manière optimale, sans que vous ayez à vous en soucier.</p>
+  </div>
+
+</div>
+
+<!-- Bouton vers les tarifs -->
+<div class="services-button">
+  <a href="services-et-tarifs" class="btn">Voir mes tarifs</a>
+</div>
+</div>
+</section>
+
 <!-- Section "Parcours" -->
 <section id="parcours" class="parcours">
     <div class="parcours-container">
@@ -19,19 +61,6 @@ Lancer ma micro-entreprise m'a permis de transformer cette passion en métier, e
             </p>
         </div>
     </div>
-    
-    <!-- Ajout de la sous-section pour CV et LinkedIn -->
-    <div class="parcours-extra">
-        <p>Téléchargez mon CV et visitez mon profil LinkedIn pour en savoir plus sur mon parcours professionnel.</p>
-        <div class="links">
-            <a href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/docs/nicolas_guapo_cv_DEV_2024.pdf" class="btn cv-btn" target="_blank">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/pdf-icon.png" alt="PDF Icon" class="icon" />Téléchargez mon CV
-            </a>
-            <a href="https://www.linkedin.com/in/nicolas-guapo%E2%9C%85-1b2848131/" class="btn linkedin-btn" target="_blank">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/linkedin-icon.png" alt="LinkedIn Icon" class="icon" /> 
-            </a>
-        </div>
-    </div>
 </section>
 
 
@@ -39,67 +68,47 @@ Lancer ma micro-entreprise m'a permis de transformer cette passion en métier, e
 <?php get_template_part('template-parts/competence'); ?>
 
 
-<section id="services" class="services-section">
-    <div class="container">
-        <h2 class="section-title">Mes Services</h2>
-        <div class="services-grid">
-            <?php
-            $args = array('post_type' => 'service', 'posts_per_page' => -1);
-            $services_query = new WP_Query($args);
-            if ($services_query->have_posts()) :
-                while ($services_query->have_posts()) : $services_query->the_post(); ?>
-                    <div class="service-item">
-                        <a href="<?php the_permalink(); ?>">
-                            <div class="service-image">
-                                <?php if (has_post_thumbnail()) : ?>
-                                    <?php the_post_thumbnail('medium'); ?>
-                                <?php endif; ?>
-                            </div>
-                            <h3 class="service-title"><?php the_title(); ?></h3>
-                            <p class="service-excerpt"><?php the_excerpt(); ?></p>
-                            <span class="service-link">En savoir plus</span>
-                        </a>
-                    </div>
-                <?php endwhile;
-            endif;
-            wp_reset_postdata();
-            ?>
-        </div>
-    </div>
-</section>
+
 
 <!--Inclusion du fichier "creation" -->
 <?php get_template_part('template-parts/creation'); ?>
 
-<!-- Section "Contact" -->
-<section id="contact" class="contact-section">
-    <div class="container">
-        <h2 class="contact-title">Contact</h2>
-        <p>Parlons <span class="caveat-font"> de votre projet...</span></p>
-        <div class="contact-content">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span><span class="caveat-font">Adresse</span> <br><br> 95570, Attainville</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-id-card"></i>
-                    <span><span class="caveat-font">N° Siret</span> <br><br> 933187775</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span><span class="caveat-font">Email</span> <br><br> nicolas.lecoeur.guapo@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <span><span class="caveat-font">Téléphone</span> <br><br> 0616354094</span>
-                </div>
-            </div>
-            <div class="contact-form">
-                <?php echo do_shortcode('[contact-form-7 id="2b8afb3" title="Formulaire de contact"]'); ?>
-            </div>
-        </div>
+
+<section class="home-contact-section">
+  <div class="container">
+    <h2 class="contact-title">Contact</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <p class="contact-subtitle">Prêt à travailler ensemble ?</p>
+        <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="contact-button">
+          <i class="fas fa-envelope"></i> Contacter moi
+        </a>
+      </div>
+      <div class="contact-image">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/contacte.webp" alt="Image de contact">
+      </div>
     </div>
+  </div>
 </section>
+
+<section class="home-footer-section">
+  <div class="container">
+    <div class="footer-logo">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo"> <!-- Chemin vers votre logo -->
+    </div>
+    <div class="footer-text">
+      J’aide les TPE, PME et les indépendants à développer leur activité grâce à un site internet et à un suivi personnalisé.
+    </div>
+    <div class="footer-links">
+      <ul>
+        <li><a href="services-et-tarifs">Tarifs</a></li>
+        <li><a href="#creation">Portfolio</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="#parcours">À propos</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
 <?php get_footer(); ?>

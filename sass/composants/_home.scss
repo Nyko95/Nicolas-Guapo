@@ -1,0 +1,72 @@
+.home-footer-section {
+  padding: 60px 20px;
+  background-color: #000; // Fond noir
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; // Utilisation de flexbox pour l'alignement
+    align-items: center;
+    justify-content: space-between; // Espace entre les éléments
+    color: #fff; // Couleur du texte en blanc
+
+    // Ajout d'une règle pour la version mobile
+    @media (max-width: 768px) {
+      flex-direction: column; // Les éléments seront en colonne
+      text-align: center; // Centrer le texte
+    }
+
+    .footer-logo {
+      flex: 1; // Prend une partie de l'espace disponible
+      margin-bottom: 20px; // Espacement en bas pour mobile
+      text-align: center; // Centrer le logo
+
+      img {
+        max-width: 80%; // Réduit la largeur maximale du logo sur mobile
+        height: auto; // Maintient le ratio de l'image
+
+        @media (max-width: 768px) {
+          max-width: 60%; // Réduction supplémentaire pour les petits écrans
+        }
+      }
+    }
+
+    .footer-text {
+      flex: 2; // Prend une partie de l'espace disponible
+      text-align: center; // Centrer le texte
+      font-size: 1.2rem; // Taille du texte
+
+      @media (max-width: 768px) {
+        font-size: 1rem; // Réduction de la taille du texte sur mobile
+      }
+    }
+
+    .footer-links {
+      flex: 1; // Prend une partie de l'espace disponible
+      text-align: right; // Alignement à droite
+
+      @media (max-width: 768px) {
+        text-align: center; // Centre les liens sur mobile
+      }
+
+      ul {
+        list-style: none; // Pas de points pour la liste
+        padding: 0; // Suppression du padding
+
+        li {
+          margin: 10px 0; // Espacement entre les liens
+
+          a {
+            color: #ffd700; // Couleur des liens en blanc
+            text-decoration: none; // Pas de soulignement
+            transition: color 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); // Ombre autour des liens
+            &:hover {
+              color: #ccc; // Changement de couleur au survol
+            }
+          }
+        }
+      }
+    }
+  }
+}

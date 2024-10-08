@@ -15,7 +15,7 @@
         <div class="container">
             <div class="site-logo">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/logo.png" alt="Logo">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/ng.png" alt="Logo">
                 </a>
             </div>
             
@@ -29,7 +29,6 @@
             
             <nav id="primary-menu" class="main-navigation">
                 <ul class="menu">
-                    <!-- Lien Accueil -->
                     <li class="menu-item menu-item-accueil">
                         <a href="<?php echo esc_url(home_url('/')); ?>">Accueil</a>
                     </li>

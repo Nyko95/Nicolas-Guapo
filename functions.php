@@ -79,3 +79,8 @@ function nicolas_guapo_enqueue_swiper() {
     ");
 }
 add_action('wp_enqueue_scripts', 'nicolas_guapo_enqueue_swiper');
+
+function add_fontawesome() {
+    wp_enqueue_style( 'fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css' );
+}
+add_action('wp_enqueue_scripts', 'add_fontawesome');
