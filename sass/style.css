@@ -774,10 +774,10 @@
     padding: 30px;
   }
   .services-tarifs-container .services-title {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
   .services-tarifs-container .services-intro {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
   .services-tarifs-container .services-grid {
     flex-direction: column;
@@ -789,10 +789,10 @@
     padding: 20px;
   }
   .services-tarifs-container .services-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   .services-tarifs-container .services-intro {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .services-tarifs-container .btn {
     padding: 8px 15px;
@@ -1312,7 +1312,7 @@
   text-align: center;
 }
 .contact-page .contact-blocks .contact-block i {
-  font-size: 2rem;
+  font-size: 3.5rem;
   margin-bottom: 10px;
 }
 .contact-page .contact-blocks .contact-block h4 {
@@ -1407,7 +1407,7 @@ p {
   margin: 20px auto; /* Centre le bouton et ajoute de l'espace au-dessus et en-dessous */
 }
 .contact-section .contact-form input[type=submit]:hover {
-  background-color: #7a7b7b; /* Changement de couleur au survol */
+  background-color: #ffd700; /* Changement de couleur au survol */
   transform: translateY(-2px); /* Effet de soulevement */
 }
 .contact-section .contact-form .wpcf7-form-control.wpcf7-checkbox {

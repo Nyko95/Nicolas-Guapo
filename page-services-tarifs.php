@@ -88,7 +88,7 @@ get_header();
         <h2>Forfait de Maintenance</h2>
         <p class="maintenance-price">25€ par mois</p>
         <p>
-            Un site internet se doit d’être régulièrement mis à jour pour rester performant et sécurisé.
+            <strong>Un site internet se doit d’être régulièrement mis à jour pour rester performant et sécurisé.</strong>
             <br><br>
             Chacune de mes prestations inclut 3 mois de maintenance.
             <br>
@@ -111,5 +111,22 @@ get_header();
 </div>
 
 </div>
-
+<section class="home-footer-section">
+  <div class="container">
+    <div class="footer-logo">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo"> <!-- Chemin vers votre logo -->
+    </div>
+    <div class="footer-text">
+      J’aide les TPE, PME et les indépendants à développer leur activité grâce à un site internet et à un suivi personnalisé.
+    </div>
+    <div class="footer-links">
+      <ul>
+        <li><a href="services-et-tarifs">Tarifs</a></li>
+        <li><a href="#creation">Portfolio</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="#parcours">À propos</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
 <?php get_footer(); ?>

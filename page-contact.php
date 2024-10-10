@@ -38,5 +38,22 @@ get_header();
     <?php echo do_shortcode('[contact-form-7 id="2b8afb3" title="Formulaire de contact"]'); ?>
   </div>
 </div>
-
+<section class="home-footer-section">
+  <div class="container">
+    <div class="footer-logo">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo"> <!-- Chemin vers votre logo -->
+    </div>
+    <div class="footer-text">
+      J’aide les TPE, PME et les indépendants à développer leur activité grâce à un site internet et à un suivi personnalisé.
+    </div>
+    <div class="footer-links">
+      <ul>
+        <li><a href="services-et-tarifs">Tarifs</a></li>
+        <li><a href="#creation">Portfolio</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="#parcours">À propos</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
 <?php get_footer(); ?>
