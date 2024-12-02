@@ -17,14 +17,20 @@ get_header();
       <i class="fas fa-envelope"></i>
       <h4>Par e-mail</h4>
       <p>
-        <a href="mailto:nicolas.lecoeur.guapo@gmail.com" target="_blank">nicolas.lecoeur.guapo@gmail.com</a>
+        <a href="mailto:contact@nicolas-guapo.fr" target="_blank">contact@nicolas-guapo.fr</a>
       </p>
     </div>
     
+    <div class="contact-block instagram">
+    <i class="fab fa-instagram"></i>
+    <h4>Sur Instagram</h4>
+    <a href="https://www.instagram.com/nguapo_dev/" class="btn" target="_blank">Aller sur Instagram</a>
+  </div>
+
     <div class="contact-block linkedin">
       <i class="fab fa-linkedin"></i>
       <h4>Sur Linkedin</h4>
-      <a href="https://www.linkedin.com/in/nicolas-guapo%E2%9C%85-1b2848131/" class="btn" target="_blank">Aller sur Linkedin</a>
+      <a href="https://www.linkedin.com/in/nicolas-guapo/" class="btn" target="_blank">Aller sur Linkedin</a>
     </div>
   </div>
 
@@ -38,10 +44,11 @@ get_header();
     <?php echo do_shortcode('[contact-form-7 id="2b8afb3" title="Formulaire de contact"]'); ?>
   </div>
 </div>
+</div>
 <section class="home-footer-section">
   <div class="container">
     <div class="footer-logo">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo"> <!-- Chemin vers votre logo -->
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/monlogo1.png" alt="Logo"> <!-- Chemin vers votre logo -->
     </div>
     <div class="footer-text">
       J’aide les TPE, PME et les indépendants à développer leur activité grâce à un site internet et à un suivi personnalisé.
@@ -54,6 +61,7 @@ get_header();
         <li><a href="#parcours">À propos</a></li>
       </ul>
     </div>
-  </div>
+  
 </section>
+
 <?php get_footer(); ?>

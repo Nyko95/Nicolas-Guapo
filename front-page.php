@@ -39,7 +39,7 @@
 
 <!-- Bouton vers les tarifs -->
 <div class="services-button">
-  <a href="services-et-tarifs" class="btn">Voir mes tarifs</a>
+  <a href="services-et-tarifs" class="btn">Consulter les tarifs</a>
 </div>
 </div>
 </section>
@@ -63,6 +63,58 @@ Lancer ma micro-entreprise m'a permis de transformer cette passion en métier, e
     </div>
 </section>
 
+<!-- Section "Collaborer avec moi" -->
+<section id="collaborer" class="collaborer">
+    <h2 class="collaborer-title">Collaborer avec moi,<br> comment ça se passe ?</h2>
+    <div class="collaborer-container">
+        <div class="collaborer-step">
+            <div class="collaborer-icon">
+                <div class="icon-circle">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+            <div class="collaborer-content">
+                <h3>1. Premier contact</h3>
+                <p>On échange sur votre projet, vos idées et vos objectifs. Je prends le temps d'écouter vos besoins pour bien cerner vos attentes.</p>
+            </div>
+        </div>
+        <div class="collaborer-step">
+            <div class="collaborer-icon">
+                <div class="icon-circle">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+            <div class="collaborer-content">
+                <h3>2. Proposition & devis</h3>
+                <p>Je vous envoie un devis détaillé avec une présentation de la solution que je vous propose. Nous ajustons ensemble les points nécessaires pour que tout soit clair avant de commencer.</p>
+            </div>
+        </div>
+        <div class="collaborer-step">
+            <div class="collaborer-icon">
+                <div class="icon-circle">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+            <div class="collaborer-content">
+                <h3>3. Création & suivi</h3>
+                <p>Une fois le devis validé, je me mets au travail sur votre site. Je vous tiens régulièrement informé de l’avancée du projet, et vous pouvez suivre son évolution à chaque étape.</p>
+            </div>
+        </div>
+        <div class="collaborer-step">
+            <div class="collaborer-icon">
+                <div class="icon-circle">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+            <div class="collaborer-content">
+                <h3>4. Livraison & support</h3>
+                <p>Votre site est prêt ! Je vous remets les accès, la charte graphique, et les documents essentiels. 3 mois de maintenance sont inclus, avec possibilité de prolongation pour seulement 30€ par mois.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Ligne de progression -->
+    <div class="progress-line"></div>
+</section>
 
 <!--Inclusion du fichier "competences" -->
 <?php get_template_part('template-parts/competence'); ?>
@@ -73,8 +125,8 @@ Lancer ma micro-entreprise m'a permis de transformer cette passion en métier, e
 <!--Inclusion du fichier "creation" -->
 <?php get_template_part('template-parts/creation'); ?>
 
-
-<section class="home-contact-section">
+<!--Section "contact" -->
+<section class="home-contact-section" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/contacte.webp');">
   <div class="container">
     <h2 class="contact-title">Contact</h2>
     <div class="contact-content">
@@ -84,9 +136,6 @@ Lancer ma micro-entreprise m'a permis de transformer cette passion en métier, e
           <i class="fas fa-envelope"></i> Contacter moi
         </a>
       </div>
-      <div class="contact-image">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/contacte.webp" alt="Image de contact">
-      </div>
     </div>
   </div>
 </section>
@@ -94,7 +143,7 @@ Lancer ma micro-entreprise m'a permis de transformer cette passion en métier, e
 <section class="home-footer-section">
   <div class="container">
     <div class="footer-logo">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo"> <!-- Chemin vers votre logo -->
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/monlogo1.png" alt="Logo"> <!-- Chemin vers votre logo -->
     </div>
     <div class="footer-text">
       J’aide les TPE, PME et les indépendants à développer leur activité grâce à un site internet et à un suivi personnalisé.

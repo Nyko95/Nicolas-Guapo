@@ -9,9 +9,11 @@
             ));
             ?>
         </div>
+        
         <div class="footer-copyright">
             <p>&copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?>. Tous Droits Réservés.</p>
         </div>
+        
     </div><!-- .container -->
 </footer><!-- .site-footer -->
 

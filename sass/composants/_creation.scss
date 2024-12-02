@@ -1,16 +1,6 @@
 .creation {
   padding: 50px 0;
-  background: linear-gradient(
-    to bottom,
-
-    #a3d680,
-    // Vert clair
-    #75c993,
-    // Vert moyen
-    #50bba3,
-    // Vert bleuté
-    #2caeb4 // Vert profond
-  );
+  background: linear-gradient(to bottom, #2caeb4, #50bba3, #75c993, #a3d680);
 
   .container {
     display: block;

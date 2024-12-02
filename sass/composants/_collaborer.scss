@@ -1,0 +1,105 @@
+.collaborer {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f0f0f0, #d3d3d3);
+  position: relative;
+
+  .collaborer-title {
+    text-align: center;
+    font-size: 3.5em;
+    margin-bottom: 100px;
+    color: black;
+  }
+
+  .collaborer-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .collaborer-step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    position: relative;
+
+    .collaborer-icon {
+      .icon-circle {
+        width: 40px;
+        height: 40px;
+        background: #ffd700;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        i {
+          color: white;
+          font-size: 1.2em;
+          transform: translateY(5px);
+        }
+      }
+    }
+
+    .collaborer-content {
+      background: linear-gradient(
+        to bottom,
+        #2caeb4,
+        #50bba3,
+        #75c993,
+        #a3d680
+      );
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      flex: 1;
+      margin-left: 20px;
+    }
+  }
+
+  /* Ligne de progression */
+  .progress-line {
+    position: absolute;
+    left: 24.8%; /* Position pour la version desktop */
+    top: 320px; /* Ajustement de la position verticale */
+    width: 4px; /* Largeur de la ligne */
+    background: black; /* Couleur de la ligne */
+    height: 0; /* Hauteur initiale */
+    transition: height 0.4s ease, opacity 0.4s ease; /* Transition fluide */
+    opacity: 0; /* Initialement cachée */
+    z-index: 1;
+  }
+
+  /* Version mobile */
+  @media (max-width: 768px) {
+    .progress-line {
+      left: 8.2%; /* Ajuste la position à gauche pour la version mobile */
+      top: 250px;
+    }
+    .collaborer-title {
+      font-size: 2.5em; /* Réduit la taille du titre pour les écrans mobiles */
+      margin-bottom: 50px; /* Ajuste l'espacement si nécessaire */
+    }
+  }
+
+  /* Version tablette */
+  @media (max-width: 600px) {
+    .progress-line {
+      left: 8%; /* Ajuste la position pour les écrans très petits */
+      top: 230px; /* Position encore plus bas pour les petits écrans */
+    }
+  }
+
+  /* Version très petite tablette / mobile */
+  @media (max-width: 480px) {
+    .progress-line {
+      left: 9.8%; /* Décale encore plus à droite pour les plus petits écrans */
+      top: 200px; /* Ajustement supplémentaire pour une meilleure position */
+    }
+
+    .collaborer-title {
+      font-size: 2em; /* Réduit encore plus la taille du titre */
+      margin-bottom: 40px; /* Ajuste l'espacement */
+    }
+  }
+}

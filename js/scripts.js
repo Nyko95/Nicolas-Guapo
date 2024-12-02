@@ -66,3 +66,76 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(afficherRoleSuivant, 3000);
   });
 });
+
+//Listes déroulantes pour questions réponses
+function toggleAnswer(questionElement) {
+  const answerElement = questionElement.nextElementSibling; // Sélectionne l'élément suivant
+  if (answerElement.style.display === "block") {
+    answerElement.style.display = "none"; // Masquer si déjà affiché
+  } else {
+    answerElement.style.display = "block"; // Afficher si masqué
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const progressLine = document.querySelector(".progress-line");
+  const steps = document.querySelectorAll(".collaborer-step");
+  const icons = document.querySelectorAll(".collaborer-icon");
+
+  function updateProgressLine() {
+    const scrollTop = window.scrollY; // Position de défilement actuelle
+    const sectionTop = document.querySelector("#collaborer").offsetTop; // Position du haut de la section
+    const sectionHeight = document.querySelector("#collaborer").offsetHeight; // Hauteur de la section
+    const isMobile = window.innerWidth <= 768; // Vérifier si on est sur mobile
+
+    // Vérifiez si nous sommes dans la section
+    if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
+      // Calculez la progression en fonction de la position de défilement dans la section
+      const scrollInSection = scrollTop - sectionTop; // Position de défilement dans la section
+      const progressPercentage = Math.min(scrollInSection / sectionHeight, 1); // Limite à 100%
+
+      // Ajustez la hauteur de la ligne de progression selon l'appareil
+      const newHeight = Math.min(
+        progressPercentage * sectionHeight * (isMobile ? 1 : 0.8), // Facteur ajusté pour mobile
+        sectionHeight
+      );
+      progressLine.style.height = `${newHeight}px`;
+      progressLine.style.opacity = 1; // Rendre la ligne visible
+
+      // Change la couleur de l'icône pour chaque étape atteinte
+      icons.forEach((icon, index) => {
+        const circle = icon.querySelector(".icon-circle"); // Sélectionne le cercle
+
+        // Vérifiez si le défilement atteint l'étape actuelle
+        if (scrollInSection >= (index / steps.length) * sectionHeight) {
+          circle.style.backgroundColor = "black"; // Change la couleur de fond du cercle à noir
+          circle.style.color = "white"; // Change la couleur de l'icône à l'intérieur pour qu'elle soit visible
+        } else {
+          circle.style.backgroundColor = "#ffd700"; // Réinitialiser à la couleur initiale (par exemple, or)
+          circle.style.color = "black"; // Réinitialiser la couleur de l'icône à l'intérieur
+        }
+      });
+    } else {
+      // Réinitialisez si nous ne sommes pas dans la section
+      progressLine.style.height = 0; // Réinitialiser la hauteur
+      progressLine.style.opacity = 0; // Masquer la ligne
+      icons.forEach((icon) => {
+        const circle = icon.querySelector(".icon-circle");
+        circle.style.backgroundColor = "#ffd700"; // Réinitialiser la couleur de fond
+        circle.style.color = "black"; // Réinitialiser la couleur de l'icône à l'intérieur
+      });
+    }
+  }
+
+  window.addEventListener("scroll", updateProgressLine);
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const conversionMessage = document.querySelector(".mo-conversion-message");
+  const form = document.querySelector(".mo-optin-form");
+
+  if (conversionMessage && form) {
+    // Cache le message de conversion et réaffiche le formulaire
+    conversionMessage.style.display = "none";
+    form.style.display = "block";
+  }
+});

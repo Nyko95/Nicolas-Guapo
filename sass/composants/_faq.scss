@@ -1,0 +1,185 @@
+.conteneur {
+  display: block;
+}
+
+.faq-section {
+  background-color: #1a1a1a; /* Couleur de fond */
+  padding: 50px 20px; /* Espacement autour de la section */
+  color: white; /* Couleur du texte */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Ombre portée */
+  margin-bottom: 50px; /* Marge en bas pour séparer des autres sections */
+  margin-top: 90px;
+}
+
+.faq-title {
+  text-align: center; /* Centrer le titre */
+  margin-bottom: 30px; /* Marge sous le titre */
+}
+
+.faq-title h2 {
+  font-size: 2.5em; /* Taille du titre */
+  color: #ffd700; /* Couleur du titre */
+  margin-bottom: 50px;
+}
+
+.faq-content {
+  display: flex; /* Flexbox pour la mise en page */
+  justify-content: space-evenly; /* Espacement entre les colonnes */
+  align-items: stretch; /* Étendre les éléments enfants pour avoir la même hauteur */
+}
+
+.faq-questions {
+  width: 50%; /* Largeur du bloc de questions */
+  padding: 20px; /* Ajout d'un peu d'espacement */
+  h4 {
+    font-size: 1.6em;
+  }
+}
+
+.faq-item {
+  margin-bottom: 20px; /* Marge entre les questions */
+}
+
+.faq-question {
+  display: flex; /* Utiliser Flexbox pour centrer verticalement */
+  align-items: center; /* Centrer verticalement le contenu */
+  justify-content: space-between; /* Espacement entre la question et la flèche */
+  cursor: pointer; /* Curseur pour indiquer qu'il est cliquable */
+  font-weight: bold; /* Gras pour la question */
+  padding: 15px; /* Espacement interne */
+  background-color: #333; /* Couleur de fond des questions */
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s; /* Transition pour un effet de survol */
+}
+
+.faq-question:hover {
+  background-color: #444; /* Changement de couleur au survol */
+}
+
+.faq-answer {
+  display: none; /* Masquer la réponse par défaut */
+  padding: 15px; /* Espacement interne */
+  background-color: #444; /* Couleur de fond des réponses */
+  border-radius: 5px; /* Coins arrondis */
+}
+
+.faq-image {
+  width: 30%; /* Largeur du bloc d'image réduite */
+  padding: 30px; /* Espacement interne */
+  border-radius: 5px; /* Coins arrondis */
+  position: relative; /* Pour le positionnement de l'image */
+  overflow: hidden; /* Masquer les débordements */
+  display: flex; /* Utiliser Flexbox pour centrer le contenu */
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  height: 100%; /* Faire en sorte que la hauteur s'étende pour égaliser les dimensions */
+}
+
+.faq-image img {
+  width: 100%; /* Rendre l'image responsive */
+  height: auto; /* Conserver le ratio d'aspect */
+  display: block; /* Évite les espaces en dessous de l'image */
+  object-fit: cover; /* Couvre le conteneur sans déformer l'image */
+}
+
+.faq-text {
+  text-align: center; /* Centrer le texte */
+  color: white; /* Couleur du texte */
+  position: absolute; /* Positionnement absolu pour superposer le texte */
+  top: 50%; /* Ajuster la position verticale du texte */
+  left: 50%; /* Ajuster la position horizontale du texte */
+  transform: translate(-50%, -50%); /* Centrer le texte */
+  padding: 10px; /* Ajout d'un peu d'espacement */
+}
+
+.faq-text h3 {
+  font-size: 1.7em; /* Taille du texte */
+  margin-bottom: 10px; /* Marge sous le titre */
+}
+
+.faq-text p {
+  margin-bottom: 20px; /* Marge sous le paragraphe */
+}
+
+.button {
+  display: inline-block; /* Bouton en ligne */
+  padding: 10px 20px; /* Espacement interne du bouton */
+  background-color: #ffd700; /* Couleur du bouton */
+  color: black; /* Couleur du texte du bouton */
+  text-decoration: none; /* Pas de soulignement */
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s; /* Transition pour l'effet au survol */
+}
+
+.button:hover {
+  background-color: #e6c800; /* Changement de couleur au survol */
+}
+
+.arrow {
+  margin-left: auto; /* Pousse la flèche à droite */
+  align-self: flex-start; /* Aligner la flèche en haut du bloc */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .faq-content {
+    flex-direction: column; /* Passer en colonne sur petits écrans */
+    align-items: center; /* Centrer le contenu dans le conteneur */
+  }
+  .faq-questions {
+    width: 100%; /* Largeur complète sur petits écrans */
+    padding: 10px; /* Moins d'espacement */
+    text-align: center; /* Centrer le texte */
+
+    h4 {
+      font-size: 1.3em;
+    }
+  }
+
+  .faq-item {
+    width: 100%; /* Élargir les items de questions */
+    margin-bottom: 10px; /* Réduire la marge entre les items */
+    text-align: center; /* Centrer le texte de chaque item */
+  }
+
+  .faq-image {
+    width: 100%; /* Largeur complète sur petits écrans */
+    padding: 20px; /* Moins d'espacement */
+  }
+
+  .faq-title h2 {
+    font-size: 2em; /* Réduction de la taille du titre */
+    text-align: center; /* Centrer le titre */
+  }
+
+  .faq-text {
+    text-align: center; /* Centrer le texte dans cette section */
+  }
+
+  .faq-text h3 {
+    font-size: 1.5em; /* Réduction de la taille du sous-titre */
+  }
+
+  .faq-text p {
+    font-size: 0.9em; /* Réduction de la taille du texte */
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-image {
+    padding: 10px; /* Réduire l'espacement sur très petits écrans */
+  }
+
+  .faq-title h2 {
+    font-size: 1.5em; /* Réduction de la taille du titre */
+  }
+
+  .faq-text h3 {
+    font-size: 1.3em; /* Réduction de la taille du sous-titre */
+  }
+
+  .faq-text p {
+    font-size: 0.8em; /* Réduction de la taille du texte */
+  }
+}

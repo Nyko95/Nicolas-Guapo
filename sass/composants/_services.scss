@@ -1,38 +1,39 @@
 .services {
   background: linear-gradient(to bottom, #2caeb4, #50bba3, #75c993, #a3d680);
-  padding: 50px 20px; // Espacement interne
+  padding: 50px 20px;
 
   .container {
-    display: block;
-    max-width: 1400px; // Largeur maximale du conteneur
-    margin: 0 auto; // Centrer le conteneur
-    padding: 0 20px; // Espacement interne
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
     text-align: center;
 
     .section-title {
-      font-size: 3rem; // Taille par défaut
+      font-size: 3rem;
       text-align: center;
-      margin: 0 auto 40px; // Centrer le titre et ajouter une marge inférieure
+      margin: 0 auto 40px;
       color: #333;
-      padding: 10px 80px; // Ajuste l'espacement interne autour du texte
-      border: 2px solid; // Bordure autour du titre
-      display: inline-block; // Garde la bordure ajustée autour du texte
-      border-radius: 10px; // Coins arrondis pour la bordure
-      opacity: 0; // Initialement caché
-      transform: translateY(100px); // Position initiale pour l'effet de montée
-      transition: opacity 2s ease, transform 2s ease, visibility 2s ease; // Transition pour l'opacité, la position et la visibilité
+      padding: 10px 80px;
+      border: 2px solid;
+      display: inline-block;
+      border-radius: 10px;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: opacity 2s ease, transform 2s ease, visibility 2s ease;
 
       &.is-visible {
-        opacity: 1; // Rendre visible
-        transform: translateY(0); // Déplacer à la position finale
-        visibility: visible; // Assurez-vous que l'élément est visible
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
       }
 
-      // Media query pour réduire la taille du titre sur mobile
       @media (max-width: 768px) {
-        font-size: 2rem; // Réduit la taille de police pour les petits écrans
-        padding: 10px; // Ajuste l'espacement interne pour les petits écrans
-        margin: 0 auto 30px; // Assure le centrage avec marge inférieure
+        font-size: 2rem;
+        padding: 10px;
+        margin: 0 auto 30px;
       }
     }
 
@@ -41,13 +42,12 @@
       margin-bottom: 50px;
 
       .services-subtitle {
-        font-size: 2.5rem; // Taille par défaut
+        font-size: 2.5rem;
         color: black;
         margin-bottom: 80px;
 
-        // Media query pour réduire la taille du sous-titre sur mobile
         @media (max-width: 768px) {
-          font-size: 1.8rem; // Réduction de la taille de police pour les petits écrans
+          font-size: 1.8rem;
         }
       }
 
@@ -57,35 +57,32 @@
         color: #555;
         margin-bottom: 60px;
 
-        // Media query pour réduire la taille du texte sur mobile
         @media (max-width: 768px) {
-          font-size: 1rem; // Réduction de la taille de police pour les petits écrans
+          font-size: 1rem;
         }
       }
     }
 
     .services-blocks {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 30px; // Espacement entre les blocs
-      margin-bottom: 60px; // Ajustez cette valeur si besoin
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 60px;
 
       .service-block {
-        background: linear-gradient(
-          135deg,
-          #f0f0f0,
-          #d3d3d3
-        ); // Dégradé léger de gris
+        background: linear-gradient(135deg, #f0f0f0, #d3d3d3);
         padding: 30px;
         border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); // Ombre autour du bloc
-        transition: transform 0.3s ease, box-shadow 0.3s ease; // Transition pour l'effet au survol
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
 
         &:hover {
-          transform: translateY(
-            -5px
-          ); // Légère translation vers le haut au survol
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); // Ombre plus prononcée au survol
+          transform: translateY(-5px);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
         h4 {
@@ -93,47 +90,44 @@
           color: rgb(10, 174, 139);
           margin-bottom: 15px;
 
-          // Media query pour réduire la taille du titre du service sur mobile
           @media (max-width: 768px) {
-            font-size: 1.2rem; // Réduction de la taille de police pour les petits écrans
+            font-size: 1.3rem;
           }
         }
 
         p {
-          font-size: 1rem;
+          font-size: 1.2rem;
           color: #555;
           line-height: 1.5;
 
-          // Media query pour réduire la taille du texte sur mobile
           @media (max-width: 768px) {
-            font-size: 0.9rem; // Réduction de la taille de police pour les petits écrans
+            font-size: 1.1rem;
           }
         }
       }
     }
 
     .services-button {
-      text-align: center; // Cela garantit que le bouton est centré
-      margin-top: 40px; // Ajustez la marge supérieure si besoin
+      text-align: center;
+      margin-top: 40px;
 
       .btn {
-        display: inline-block; // S'assure que le bouton est affiché en tant que bloc en ligne
+        display: inline-block;
         padding: 15px 30px;
         background-color: black;
         color: white;
         border-radius: 5px;
         text-decoration: none;
         font-size: 1.2rem;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); // Ombre autour du bloc
-        transition: transform 0.3s ease, box-shadow 0.3s ease; // Transition pour l'effet au survol
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
 
         &:hover {
           background-color: rgb(56, 53, 53);
         }
 
-        // Media query pour réduire la taille du bouton sur mobile
         @media (max-width: 768px) {
-          font-size: 1rem; // Réduction de la taille de police pour le bouton
+          font-size: 1rem;
         }
       }
     }
@@ -143,14 +137,31 @@
 // Médias queries pour assurer la responsivité
 @media (max-width: 768px) {
   .services {
-    padding: 30px 10px; // Réduit le padding
+    padding: 30px 10px;
   }
 
   .container {
-    padding: 0 10px; // Réduire l'espacement interne sur les petits écrans
+    padding: 0 10px;
   }
 
   .services-blocks {
-    grid-template-columns: 1fr; // Affiche les blocs en colonne sur les petits écrans
+    gap: 20px;
+  }
+
+  .service-block {
+    padding: 20px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .services {
+    padding: 20px 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .services {
+    padding: 15px 5px;
   }
 }

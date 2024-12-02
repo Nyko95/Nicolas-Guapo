@@ -65,6 +65,7 @@
         border-radius: 10px;
         display: inline-block; //Ajuste la bordure à la largeur du texte
         padding: 10px 50px; /* Ajoute du padding pour aérer le cadre */
+        margin-bottom: 20px;
 
         @media (max-width: 768px) {
           font-size: 2rem;

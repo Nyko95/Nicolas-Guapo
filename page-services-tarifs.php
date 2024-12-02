@@ -29,64 +29,64 @@ get_header();
     <!-- Section Services -->
     <div class="services-grid">
 
-        <!-- Bloc 1 : Site One Page -->
-        <div class="service-block">
-            <h2>Site One Page</h2>
-            <p class="service-description">Un site simple et efficace pour présenter l'essentiel de votre activité sur une seule page.</p>
-            <p class="service-price">750€</p>
-            <ul class="service-details">
-                <li><i class="fas fa-server icon-space"></i> Hébergement + Nom de domaine</li>
-                <li><i class="fas fa-paint-brush icon-space"></i> Installation thème et extensions de base</li>
-                <li><i class="fas fa-file-alt icon-space"></i> Webdesign personnalisé : page unique + pages légales</li>
-                <li><i class="fas fa-chart-line icon-space"></i> Optimisation référencement, performances</li>
-                <li><i class="fas fa-shield-alt icon-space"></i> Sécurité et sauvegardes du site</li>
-                <li><i class="fas fa-mobile-alt icon-space"></i> Responsive : adapté à tous les écrans</li>
-                <li><i class="fas fa-handshake icon-space"></i> Accompagnement + Visio d’échanges</li>
-                <li><i class="fas fa-tools icon-space"></i> <strong>Maintenance incluse de 3 mois</strong></li>
-            </ul>
-        </div>
+   <!-- Bloc 1 : Site One Page -->
+<div class="service-block">
+    <h2>Site One Page</h2>
+    <p class="service-description">Un site simple et efficace pour présenter l'essentiel de votre activité sur une seule page.</p>
+    <p class="service-price">750€</p>
+    <ul class="service-details">
+        <li><i class="fas fa-server icon-space"></i> <span>Hébergement + Nom de domaine</span></li>
+        <li><i class="fas fa-paint-brush icon-space"></i> <span>Installation thème et extensions de base</span></li>
+        <li><i class="fas fa-file-alt icon-space"></i> <span>Webdesign personnalisé : page unique + pages légales</span></li>
+        <li><i class="fas fa-chart-line icon-space"></i> <span>Optimisation référencement, performances</span></li>
+        <li><i class="fas fa-shield-alt icon-space"></i> <span>Sécurité et sauvegardes du site</span></li>
+        <li><i class="fas fa-mobile-alt icon-space"></i> <span>Responsive : adapté à tous les écrans</span></li>
+        <li><i class="fas fa-handshake icon-space"></i> <span>Accompagnement + Visio d’échanges</span></li>
+        <li><i class="fas fa-tools icon-space"></i> <strong><span>Maintenance incluse de 3 mois</span></strong></li>
+    </ul>
+</div>
 
-        <!-- Bloc 2 : Site Vitrine -->
-        <div class="service-block">
-            <h2>Site Vitrine</h2>
-            <p class="service-description">Un site pour présenter votre activité avec plusieurs pages.</p>
-            <p class="service-price">1400€</p>
-            <ul class="service-details">
-                <li><i class="fas fa-server icon-space"></i> Hébergement + Nom de domaine</li>
-                <li><i class="fas fa-paint-brush icon-space"></i> Installation thème et extensions de base</li>
-                <li><i class="fas fa-file-alt icon-space"></i> Webdesign personnalisé : plusieurs pages</li>
-                <li><i class="fas fa-chart-line icon-space"></i> Optimisation référencement, performances</li>
-                <li><i class="fas fa-shield-alt icon-space"></i> Sécurité et sauvegardes du site</li>
-                <li><i class="fas fa-mobile-alt icon-space"></i> Responsive : adapté à tous les écrans</li>
-                <li><i class="fas fa-handshake icon-space"></i> Accompagnement + Visio d’échanges</li>
-                <li><i class="fas fa-tools icon-space"></i> <strong>Maintenance incluse de 3 mois</strong></li>
-            </ul>
-        </div>
+<!-- Bloc 2 : Site Vitrine -->
+<div class="service-block">
+    <h2>Site Vitrine</h2>
+    <p class="service-description">Un site pour présenter votre activité avec plusieurs pages.</p>
+    <p class="service-price">1400€</p>
+    <ul class="service-details">
+        <li><i class="fas fa-server icon-space"></i> <span>Hébergement + Nom de domaine</span></li>
+        <li><i class="fas fa-paint-brush icon-space"></i> <span>Installation thème et extensions de base</span></li>
+        <li><i class="fas fa-file-alt icon-space"></i> <span>Webdesign personnalisé : plusieurs pages</span></li>
+        <li><i class="fas fa-chart-line icon-space"></i> <span>Optimisation référencement, performances</span></li>
+        <li><i class="fas fa-shield-alt icon-space"></i> <span>Sécurité et sauvegardes du site</span></li>
+        <li><i class="fas fa-mobile-alt icon-space"></i> <span>Responsive : adapté à tous les écrans</span></li>
+        <li><i class="fas fa-handshake icon-space"></i> <span>Accompagnement + Visio d’échanges</span></li>
+        <li><i class="fas fa-tools icon-space"></i> <strong><span>Maintenance incluse de 3 mois</span></strong></li>
+    </ul>
+</div>
 
-        <!-- Bloc 3 : Refonte Site Vitrine -->
-        <div class="service-block">
-            <h2>Refonte Site Vitrine</h2>
-            <p class="service-description">Modernisation et optimisation de votre site existant.</p>
-            <p class="service-price">1700€</p>
-            <ul class="service-details">
-                <li><i class="fas fa-server icon-space"></i> Migration hébergement/nom de domaine si besoin</li>
-                <li><i class="fas fa-paint-brush icon-space"></i> Changement thème/extensions de base</li>
-                <li><i class="fas fa-id-card icon-space"></i> Réfection de l’identité visuelle</li>
-                <li><i class="fas fa-file-alt icon-space"></i> Webdesign personnalisé des pages et restructuration des liens</li>
-                <li><i class="fas fa-chart-line icon-space"></i> Optimisation référencement, performances</li>
-                <li><i class="fas fa-shield-alt icon-space"></i> Mise en place du système de sécurité et sauvegardes du site</li>
-                <li><i class="fas fa-mobile-alt icon-space"></i> Responsive : adapté à tous les écrans</li>
-                <li><i class="fas fa-handshake icon-space"></i> Accompagnement sur l’utilisation de son site + Visio d’échanges tout au long du projet</li>
-                <li><i class="fas fa-tools icon-space"></i> <strong>Maintenance incluse de 3 mois</strong></li>
-            </ul>
-        </div>
+<!-- Bloc 3 : Refonte Site Vitrine -->
+<div class="service-block">
+    <h2>Refonte Site Vitrine</h2>
+    <p class="service-description">Modernisation et optimisation de votre site existant.</p>
+    <p class="service-price">1700€</p>
+    <ul class="service-details">
+        <li><i class="fas fa-server icon-space"></i> <span>Migration hébergement/nom de domaine si besoin</span></li>
+        <li><i class="fas fa-paint-brush icon-space"></i> <span>Changement thème/extensions de base</span></li>
+        <li><i class="fas fa-id-card icon-space"></i> <span>Réfection de l’identité visuelle</span></li>
+        <li><i class="fas fa-file-alt icon-space"></i> <span>Webdesign personnalisé des pages et restructuration des liens</span></li>
+        <li><i class="fas fa-chart-line icon-space"></i> <span>Optimisation référencement, performances</span></li>
+        <li><i class="fas fa-shield-alt icon-space"></i> <span>Mise en place du système de sécurité et sauvegardes du site</span></li>
+        <li><i class="fas fa-mobile-alt icon-space"></i> <span>Responsive : adapté à tous les écrans</span></li>
+        <li><i class="fas fa-handshake icon-space"></i> <span>Accompagnement sur l’utilisation de son site + Visio d’échanges tout au long du projet</span></li>
+        <li><i class="fas fa-tools icon-space"></i> <strong><span>Maintenance incluse de 3 mois</span></strong></li>
+    </ul>
+</div>
 
     </div>
 <!-- Nouveau bloc de forfait de maintenance -->
 <div class="maintenance-package">
     <div class="maintenance-content">
         <h2>Forfait de Maintenance</h2>
-        <p class="maintenance-price">25€ par mois</p>
+        <p class="maintenance-price">30€ par mois</p>
         <p>
             <strong>Un site internet se doit d’être régulièrement mis à jour pour rester performant et sécurisé.</strong>
             <br><br>
@@ -110,11 +110,81 @@ get_header();
     </div>
 </div>
 
+<section class="faq-section">
+    <div class="conteneur">
+        <div class="faq-title">
+            <h2>Vous pouvez répéter la question ?</h2>
+        </div>
+        <div class="faq-content">
+            <div class="faq-questions">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h4>Quelles sont les modalités de paiement ?</h4>
+                        <span class="arrow">&#x25BC;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Le paiement d’une prestation se déroule en trois temps :</p>
+                        <ul>
+                            <li>Un acompte de 30% avant le début des travaux</li>
+                            <li>Un second paiement de 30% au premier rendu du site</li>
+                            <li>Le solde restant de 40% à la livraison du site</li>
+                        </ul>
+                        <p>Le paiement se fait uniquement par virement.</p>
+                        <p>(La TVA n’est pas applicable, conformément à l’article 293B du CGI)</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h4>Combien de temps prend la création d’un site ?</h4>
+                        <span class="arrow">&#x25BC;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Chaque projet étant unique, il est délicat d’annoncer un délai précis. Pour un site vitrine classique, comptez en moyenne 2 à 3 semaines.</p>
+                        <p>Cela comprend la création mais aussi nos échanges, les éventuelles modifications et vos retours.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h4>Comment se passe le suivi ?</h4>
+                        <span class="arrow">&#x25BC;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tout au long de la création de site, je vous informerai de l’avancée des travaux.</p>
+                        <p>Cela se fait principalement par mail mais d’autres moyens de communication peuvent être utilisés en fonction de vos habitudes (WhatsApp, Téléphone, Discord…)</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h4>Et après la livraison du site ?</h4>
+                        <span class="arrow">&#x25BC;</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Lorsque le site est terminé et qu’il correspond à vos besoins, je vous envoie par mail un récapitulatif de tout le projet sous forme de charte.</p>
+                        <p>Elle comprend tous vos accès de connexion (site WordPress, hébergement, mail…), les informations sur votre identité graphique (couleurs, polices) ainsi que mes derniers conseils vis-à-vis du site.</p>
+                        <p>Enfin, une maintenance de trois mois est incluse dans toutes les formules. Il sera possible de la continuer via un forfait de maintenance pour 30€ / mois.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-image">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/contact.jpg" alt="Photo de Nicolas Guapo">
+                <div class="faq-text">
+                    <h3>Prêt à montrer votre activité sur internet ?</h3>
+                    <p>Discutons de votre projet grâce à un premier échange découverte !</p>
+                    <a href="contact" class="button">
+                        <i class="fas fa-coffee"></i> Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 </div>
 <section class="home-footer-section">
   <div class="container">
     <div class="footer-logo">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo"> <!-- Chemin vers votre logo -->
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/monlogo1.png" alt="Logo"> <!-- Chemin vers votre logo -->
     </div>
     <div class="footer-text">
       J’aide les TPE, PME et les indépendants à développer leur activité grâce à un site internet et à un suivi personnalisé.
@@ -129,4 +199,6 @@ get_header();
     </div>
   </div>
 </section>
+
+
 <?php get_footer(); ?>

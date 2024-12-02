@@ -4,9 +4,11 @@
 @import "./composants/_footer.scss";
 @import "./composants/_hero.scss";
 @import "./composants/_parcours.scss";
+@import "./composants/_collaborer.scss";
 @import "./composants/_competence.scss";
 @import "./composants/_services.scss";
 @import "./composants/_services-details.scss";
+@import "./composants/_faq.scss";
 @import "./composants/_maintenance.scss";
 @import "./composants/_creation.scss";
 @import "./composants/_creation-detail.scss";
@@ -28,4 +30,18 @@ h4,
 h5,
 h6 {
   font-family: "caveat", cursive;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; // Assure une meilleure gestion des dimensions
+}
+
+body,
+html {
+  width: 100%;
+}
+section {
+  width: 100%;
+  max-width: 100%; // Empêche les sections d'être limitées en largeur
 }
