@@ -1,6 +1,6 @@
 .home-contact-section {
   position: relative; // Position relative pour le positionnement de l'overlay
-  padding: 60px 20px;
+  padding: 80px 60px; // Augmentation du padding en haut et en bas
   background-image: url("<?php echo get_template_directory_uri(); ?>/assets/images/contacte.webp");
   background-size: cover;
   background-position: center;
@@ -33,7 +33,7 @@
       border: solid 2px;
       border-radius: 10px;
       display: inline-block;
-      padding: 10px 100px;
+      padding: 10px 70px;
       text-align: center;
       opacity: 0;
       transform: translateY(100px);
@@ -65,7 +65,7 @@
 
         .contact-subtitle {
           font-size: 2rem;
-          color: #ffd700;
+          color: #fff;
           margin-bottom: 50px;
 
           @media (max-width: 768px) {
@@ -79,12 +79,12 @@
 
         .contact-button {
           display: inline-block;
-          padding: 15px 30px;
-          background-color: #333;
-          color: #fff;
+          padding: 20px 35px;
+          background-color: #ffd700;
+          color: black;
           text-decoration: none;
-          font-size: 1.2rem;
-          border-radius: 5px;
+          font-size: 1.4rem;
+          border-radius: 20px;
           transition: background-color 0.3s ease;
 
           i {
@@ -92,7 +92,7 @@
           }
 
           &:hover {
-            background-color: #555;
+            background-color: #fff;
           }
 
           // Centrer le bouton sur mobile

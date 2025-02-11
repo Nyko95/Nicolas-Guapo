@@ -39,11 +39,14 @@
 
 <!-- Bouton vers les tarifs -->
 <div class="services-button">
-  <a href="services-et-tarifs" class="btn">Consulter les tarifs</a>
+  <a href="services-et-tarifs" class="btn">
+    <i class="fas fa-tags"></i> Consulter les tarifs
+  </a>
 </div>
 </div>
 </section>
 
+<!-- Section "Parcours" -->
 <!-- Section "Parcours" -->
 <section id="parcours" class="parcours">
     <div class="parcours-container">
@@ -53,11 +56,15 @@
         <div class="parcours-text">
             <h2 class="parcours-title">À propos de moi</h2>
             <p class="parcours-description">
-            "Après avoir passé sept ans dans le secteur de l'automobile en tant que conseiller commercial, où j'ai perfectionné l'art de l'écoute et du conseil client, j'ai entrepris une reconversion vers une carrière qui me passionne depuis toujours : le développement web.<br><br>
-Aujourd'hui, en tant que développeur web WordPress, je mets à profit ces compétences en accompagnant mes clients dans la création et l'optimisation de leurs sites internet. Grâce à ma formation spécialisée et mon expérience de terrain, je propose des solutions sur mesure, adaptées aux besoins spécifiques de chaque projet.<br><br>
-Lancer ma micro-entreprise m'a permis de transformer cette passion en métier, et je suis prêt à relever de nouveaux défis avec enthousiasme, rigueur et créativité. Que vous ayez besoin d'un site vitrine, d'une refonte de votre plateforme, ou de solutions techniques avancées, je suis à votre disposition pour donner vie à vos projets web. <br><br>Ma philosophie ?
-  <br><br>
-  <span class="phrase-accroche">Passer de la boîte de vitesses à la boîte de code, sans jamais caler !"</span>
+                "Après avoir passé sept ans dans le secteur de l'automobile en tant que conseiller commercial, où j'ai perfectionné l'art de l'écoute et du conseil client, j'ai entrepris une reconversion vers une carrière qui me passionne depuis toujours : le développement web.<br><br>
+                Aujourd'hui, en tant que développeur web WordPress, je mets à profit ces compétences en accompagnant mes clients dans la création et l'optimisation de leurs sites internet. Grâce à ma formation spécialisée et mon expérience de terrain, je propose des solutions sur mesure, adaptées aux besoins spécifiques de chaque projet.<br><br>
+                
+                <strong>Ma mission :</strong> Apporter des clients à mes clients ! 🚀<br><br>
+                En tant que créateur de sites WordPress, je conçois des outils performants et optimisés pour aider les TPE, PME et indépendants à développer leur visibilité en ligne. Mon objectif est simple : transformer votre site en un levier de croissance pour attirer plus de prospects et booster votre activité.<br><br>
+                
+                Lancer ma micro-entreprise m'a permis de transformer cette passion en métier, et je suis prêt à relever de nouveaux défis avec enthousiasme, rigueur et créativité. Que vous ayez besoin d'un site vitrine, d'une refonte de votre plateforme, ou de solutions techniques avancées, je suis à votre disposition pour donner vie à vos projets web. <br><br>
+                
+         
             </p>
         </div>
     </div>

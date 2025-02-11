@@ -38,13 +38,13 @@
       background-color: #ffd700;
       color: black;
       padding: 20px 50px;
-      border-radius: 5px;
+      border-radius: 20px;
       text-decoration: none;
       transition: background-color 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #d6d45b;
+      background-color: #fff;
     }
   }
 
@@ -60,7 +60,7 @@
       flex: 1 1 300px; // Largeur de base mais flexible
       max-width: 350px; // Limite la largeur maximale
       width: 100%; // Prend toute la largeur disponible
-      background-color: #d3d3d3;
+      background-color: #fff;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.2);

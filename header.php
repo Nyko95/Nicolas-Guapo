@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
-    <title>Création site internet à Domont dans le Val-d'Oise (95)</title>
+    <title>Création de Sites Web à Domont dans le val d'Oise (95)</title>
     <?php wp_head(); ?>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSF8NPB8ZN"></script>
@@ -25,7 +25,7 @@
         <div class="container">
             <div class="site-logo">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/mylogo.png" alt="Logo">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/monlogo1.png" alt="Logo">
                 </a>
             </div>
             
@@ -39,9 +39,9 @@
             
             <nav id="primary-menu" class="main-navigation">
                 <ul class="menu">
-                    <li class="menu-item menu-item-accueil">
+                    <!-- <li class="menu-item menu-item-accueil">
                         <a href="<?php echo esc_url(home_url('/')); ?>">Accueil</a>
-                    </li>
+                    </li> -->
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'menu-principal',

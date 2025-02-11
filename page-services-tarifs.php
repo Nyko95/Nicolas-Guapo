@@ -33,7 +33,7 @@ get_header();
 <div class="service-block">
     <h2>Site One Page</h2>
     <p class="service-description">Un site simple et efficace pour présenter l'essentiel de votre activité sur une seule page.</p>
-    <p class="service-price">750€</p>
+    <p class="service-price">950€</p>
     <ul class="service-details">
         <li><i class="fas fa-server icon-space"></i> <span>Hébergement + Nom de domaine</span></li>
         <li><i class="fas fa-paint-brush icon-space"></i> <span>Installation thème et extensions de base</span></li>
@@ -50,7 +50,7 @@ get_header();
 <div class="service-block">
     <h2>Site Vitrine</h2>
     <p class="service-description">Un site pour présenter votre activité avec plusieurs pages.</p>
-    <p class="service-price">1400€</p>
+    <p class="service-price">1600€</p>
     <ul class="service-details">
         <li><i class="fas fa-server icon-space"></i> <span>Hébergement + Nom de domaine</span></li>
         <li><i class="fas fa-paint-brush icon-space"></i> <span>Installation thème et extensions de base</span></li>
@@ -67,7 +67,7 @@ get_header();
 <div class="service-block">
     <h2>Refonte Site Vitrine</h2>
     <p class="service-description">Modernisation et optimisation de votre site existant.</p>
-    <p class="service-price">1700€</p>
+    <p class="service-price">1900€</p>
     <ul class="service-details">
         <li><i class="fas fa-server icon-space"></i> <span>Migration hébergement/nom de domaine si besoin</span></li>
         <li><i class="fas fa-paint-brush icon-space"></i> <span>Changement thème/extensions de base</span></li>
@@ -119,7 +119,7 @@ get_header();
             <div class="faq-questions">
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleAnswer(this)">
-                        <h4>Quelles sont les modalités de paiement ?</h4>
+                        <h3>Quelles sont les modalités de paiement ?</h3>
                         <span class="arrow">&#x25BC;</span>
                     </div>
                     <div class="faq-answer">
@@ -135,7 +135,7 @@ get_header();
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleAnswer(this)">
-                        <h4>Combien de temps prend la création d’un site ?</h4>
+                        <h3>Combien de temps prend la création d’un site ?</h3>
                         <span class="arrow">&#x25BC;</span>
                     </div>
                     <div class="faq-answer">
@@ -145,7 +145,7 @@ get_header();
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleAnswer(this)">
-                        <h4>Comment se passe le suivi ?</h4>
+                        <h3>Comment se passe le suivi ?</h3>
                         <span class="arrow">&#x25BC;</span>
                     </div>
                     <div class="faq-answer">
@@ -155,7 +155,7 @@ get_header();
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleAnswer(this)">
-                        <h4>Et après la livraison du site ?</h4>
+                        <h3>Et après la livraison du site ?</h3>
                         <span class="arrow">&#x25BC;</span>
                     </div>
                     <div class="faq-answer">
@@ -168,7 +168,7 @@ get_header();
             <div class="faq-image">
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/contact.jpg" alt="Photo de Nicolas Guapo">
                 <div class="faq-text">
-                    <h3>Prêt à montrer votre activité sur internet ?</h3>
+                    <h4>Prêt à montrer votre activité sur internet ?</h4>
                     <p>Discutons de votre projet grâce à un premier échange découverte !</p>
                     <a href="contact" class="button">
                         <i class="fas fa-coffee"></i> Contact

@@ -39,6 +39,20 @@
           'color' => '#cc6699',
           'percent' => 80,
           'description' => 'Sass est un langage de préprocesseur CSS qui permet d\'écrire des feuilles de style plus propres et plus faciles à gérer.'
+        ],
+        [
+          'tech' => 'Trello',
+          'icon' => 'fas fa-tasks',
+          'color' => '#0079BF',
+          'percent' => 85,
+          'description' => 'Trello est un outil de gestion de projets collaboratif qui facilite le suivi des tâches, des échéances et des progrès en équipe.'
+        ],
+        [
+          'tech' => 'Slack',
+          'icon' => 'fab fa-slack',
+          'color' => '#4A154B',
+          'percent' => 90,
+          'description' => 'Slack est une plateforme de communication en temps réel qui permet une collaboration efficace au sein des équipes.'
         ]
       ];
 

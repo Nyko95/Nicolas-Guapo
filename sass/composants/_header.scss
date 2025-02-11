@@ -8,17 +8,23 @@
       text-decoration: none;
       font-size: 16px;
       font-weight: 400;
-      color: black;
+      color: #fff;
       text-transform: uppercase;
       margin-top: 14px;
     }
+    a:hover {
+      text-decoration: underline;
+      text-decoration-color: white; /* Assure que le trait est bien blanc */
+    }
   }
 }
-
+.site-header {
+  background-color: black;
+}
 .site-header.container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   height: 140px;
 }
 
@@ -82,7 +88,7 @@
     position: relative;
     z-index: 1000;
     .container {
-      height: 100px;
+      height: 90px;
     }
   }
 
@@ -91,8 +97,8 @@
     margin-top: 3px;
     margin-bottom: 50px;
     img {
-      width: 180px;
-      margin-top: 38px;
+      width: 150px;
+      margin-top: 50px;
     }
   }
 
@@ -105,10 +111,10 @@
     cursor: pointer; // Curseur pointeur
     position: relative; // Positionnement relatif
     z-index: 1001; // Élever le z-index
-    width: 60px; // Largeur du carré (ajustée)
-    height: 60px; // Hauteur du carré (ajustée)
+    width: 40px; // Largeur du carré (ajustée)
+    height: 40px; // Hauteur du carré (ajustée)
     margin-left: 10px; // Ajustement à gauche si nécessaire
-    margin-bottom: 25px; // Ajustement en haut si nécessaire
+    margin-bottom: 10px; // Ajustement en haut si nécessaire
     margin-right: 20px;
 
     .menu-toggle-icon {

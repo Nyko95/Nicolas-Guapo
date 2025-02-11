@@ -102,11 +102,11 @@
     display: inline-block;
     margin-top: 20px; /* Pour espacer du contenu précédent */
     padding: 15px 30px;
-    background-color: black;
-    color: #fff;
+    background-color: #ffd700;
+    color: black;
     text-decoration: none;
     font-size: 1.2rem;
-    border-radius: 5px;
+    border-radius: 20px;
     transition: background-color 0.3s ease;
 
     i {
@@ -114,7 +114,7 @@
     }
 
     &:hover {
-      background-color: #555;
+      background-color: #fff;
     }
   }
 

@@ -15,7 +15,7 @@ get_header();
   <div class="contact-blocks">
     <div class="contact-block email">
       <i class="fas fa-envelope"></i>
-      <h4>Par e-mail</h4>
+      <h2>Par e-mail</h2>
       <p>
         <a href="mailto:contact@nicolas-guapo.fr" target="_blank">contact@nicolas-guapo.fr</a>
       </p>
@@ -23,13 +23,13 @@ get_header();
     
     <div class="contact-block instagram">
     <i class="fab fa-instagram"></i>
-    <h4>Sur Instagram</h4>
+    <h2>Sur Instagram</h2>
     <a href="https://www.instagram.com/nguapo_dev/" class="btn" target="_blank">Aller sur Instagram</a>
   </div>
 
     <div class="contact-block linkedin">
       <i class="fab fa-linkedin"></i>
-      <h4>Sur Linkedin</h4>
+      <h2>Sur Linkedin</h2>
       <a href="https://www.linkedin.com/in/nicolas-guapo/" class="btn" target="_blank">Aller sur Linkedin</a>
     </div>
   </div>

@@ -71,6 +71,10 @@ main-navigation li:nth-child(3) {
   justify-content: center;
   border-top: 1px solid #000000;
   padding-top: 8px;
+  background-color: black;
+}
+.footer-copyright p {
+  color: #fff;
 }
 .container-footer {
   display: flex;
